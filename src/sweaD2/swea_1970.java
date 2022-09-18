@@ -7,7 +7,8 @@ public class swea_1970 {
 
 	public static void main(String[] args) {
 		
-		// [?] 쉬운 거스름돈 
+		// [?] 쉬운 거스름돈 *
+		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
 		T=sc.nextInt();

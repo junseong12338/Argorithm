@@ -4,13 +4,11 @@ package sweaD2;
 import java.util.Scanner;
 import java.io.FileInputStream;
 public class swea_1984 {
-
-	
-	
-	
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
+	// [?] 중간 평균값 구하기 *
+		
+	Scanner sc = new Scanner(System.in);
 	int T = 0;
 	int count = 0;
 

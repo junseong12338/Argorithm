@@ -7,7 +7,8 @@ public class swea_1946 {
 
 	public static void main(String[] args) {
 		
-		// [?] 간단한 압축 풀기 
+		// [?] 간단한 압축 풀기 *
+		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
 		T=sc.nextInt();

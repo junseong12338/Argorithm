@@ -7,6 +7,8 @@ public class swea_1979 {
 
 	public static void main(String[] args) {
 		
+		// [?] 어디에 단어가 들어갈 수 있을까? *****
+		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
 		T=sc.nextInt();

@@ -6,7 +6,9 @@ import java.io.FileInputStream;
 public class swea_1954 {
 
 	public static void main(String[] args) {
-		// [?]달팽이 알고리즘
+		
+		// [?]달팽이 알고리즘 *****
+		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
 		T=sc.nextInt();

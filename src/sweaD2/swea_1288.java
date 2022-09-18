@@ -6,13 +6,8 @@ import java.io.FileInputStream;
 public class swea_1288 {
 
 	public static void main(String[] args) {
-		// 입력 된 숫자를 문자열로 추출한다
-		// 문자열로 출출된 숫자를 
-		// 각 한자리 값으로 변환한다.
-		// 각 한자리 값이  된 문자들을 count[]에 비교한다
-		// 비교하면 문자 배열에 값을 넣어준다
-		// 비교해서 값이 있으면 sheepcount[]에 해당값이 들어간다.
-		// 문자 배열 값이 null 값이 아닐때 종료 된다 
+		
+		// [?] 새로운 불면증 치료법 ***
 		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;

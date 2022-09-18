@@ -4,8 +4,10 @@ package sweaD2;
 import java.util.Scanner;
 import java.io.FileInputStream;
 public class swea_1926 {
-
 	public static int sam_yu_ggu(int num) {
+		
+		//[?] »ïÀ°±¸ ****
+		
 		int i = 0;
 		
 		while( num > 0) {

@@ -7,7 +7,8 @@ public class swea_1966 {
 
 	public static void main(String[] args) {
 		
-		// 숫자 정렬
+		// [?] 숫자 정렬 **
+		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
 		T=sc.nextInt();

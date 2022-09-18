@@ -7,6 +7,8 @@ public class swea_1928 {
 
 	public static void main(String[] args) {
 		
+		 // [?] base64 *********
+		
 		 char[] base64=new char[64];
 	        String base="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 	        for (int i=0;i<base64.length;i++) {

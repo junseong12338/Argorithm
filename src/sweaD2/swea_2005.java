@@ -7,7 +7,8 @@ public class swea_2005 {
 
 	public static void main(String[] args) {
 		 
-		// [?] 파스칼의 삼각형 
+		// [?] 파스칼의 삼각형 *****
+		
 		// 이항 갯수를 삼각형으로 배열
 		// n개 중에서 k개를 순서없이 고르는 방법
 		// n번째를 고른 경우 n-1개중에서 k-1개를 골라야함

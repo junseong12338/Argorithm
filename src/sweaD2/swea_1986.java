@@ -7,6 +7,8 @@ public class swea_1986 {
 	
 	public static void main(String[] args) {
 		
+		// [?] 지그 재그 숫자 *
+		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
 		int count = 0;

@@ -7,7 +7,8 @@ public class swea_1948 {
 
 	public static void main(String[] args) {
 		
-		// [?] 날짜 계산기
+		// [?] 날짜 계산기 *
+		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
 		T=sc.nextInt();

@@ -7,7 +7,8 @@ public class swea_1976 {
 
 	public static void main(String[] args) {
 		
-		// [?] ½Ã°¢ µ¡¼À
+		// [?] ½Ã°¢ µ¡¼À *
+		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
 		T=sc.nextInt();

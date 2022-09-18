@@ -7,6 +7,8 @@ public class swea_1204 {
 
 	public static void main(String[] args) {
 		
+		// [?] 최빈수 구하기 ***
+		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
 		int test = 0;

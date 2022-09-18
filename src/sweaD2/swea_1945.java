@@ -7,6 +7,8 @@ public class swea_1945 {
 
 	public static int[] Factorization(int num) {
 		
+		// [?] 간단한 소인수 분해 ***
+		
 		int i =0;
 		int count[] = new int[5];
 		while( num > 1) {

@@ -7,6 +7,8 @@ public class swea_1859 {
 
 	public static void main(String[] args) {
 		
+		//[?] 백만 장자 프로젝트
+		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
 		int Number = 0;
