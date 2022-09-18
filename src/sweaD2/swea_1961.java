@@ -7,7 +7,7 @@ public class swea_1961 {
 
 	public static void main(String[] args) {
 		
-		// [?] 숫자 배열 회전 **** 아무 도움 없이 클리어 ㅠㅠ
+		// [?] 숫자 배열 회전 **** 아무 도움 없이 클리어 ㅠ
 		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
@@ -51,45 +51,39 @@ public class swea_1961 {
 
 			
 			// 90 값 넣기 
-			
 			// [0][0] = [0][0] + [0][1] + [0][2]
 			// [1][0] = [1][0] + [1][1] + [1][2]
 			// [2][0] = [2][0] + [2][1] + [2][2]
 			for(int i  = 0; i < N; i++) {
-				for(int j = 0; j < 1; j++) {
-					for(int k = 0; k < N; k++) {
-						num_arry_rotation[i][j] += num_arry_temp[i][k];
-						
-					}
+				for(int j = 0; j < N; j++) {
+					num_arry_rotation[i][0] += num_arry_temp[i][j];
+					
+				}
+			}
+
+			// 180 값 넣기 
+			// [0][1] = [2][0] + [1][0] + [0][0]
+			// [1][1] = [2][1] + [1][1] + [0][1]
+			// [2][1] = [2][2] + [1][2] + [0][2]
+			for(int i  = 0; i < N; i++) {
+				for(int j = N-1; j >=0; j--) {
+					num_arry_rotation[i][1] += num_arry_temp[j][i];	
 				}
 			}
 			
-			// 180 값 넣기 
-			for(int i  = 0; i < N; i++) {
-				for(int j = 1; j <2; j++) {
-					for(int k = N-1; k >=0; k--) {
-						
-						num_arry_rotation[i][j] += num_arry_temp[k][i];
-						
-					}
-				}
-			}
+		
 			
 			// 270 값 넣기 
 			// [0][2] = [2][2] + [2][1] + [2][0]
 			// [1][2] = [1][2] + [1][1] + [1][0]
 			// [2][2] = [0][2] + [0][1] + [0][0]
-			int l = N-1;
+			int k = N-1;
 			for(int i  = 0; i < N; i++) {
-			
-				for(int j = 2; j <3; j++) {
-					for(int k = N-1; k >=0; k--) {
-						num_arry_rotation[i][j] += num_arry_temp[l][k];
-						
-					}
-					l--;
+					for(int j = N-1; j >=0; j--) {
+						num_arry_rotation[i][2] += num_arry_temp[k][j];
+					
 				}
-				
+				k--;
 			}
 			
 			System.out.println("#"+TC);
