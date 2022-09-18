@@ -7,7 +7,8 @@ public class swea_1961 {
 
 	public static void main(String[] args) {
 		
-		// [?] 숫자 배열 회전 **** 아무 도움 없이 클리어 ㅠ
+		// [?] 숫자 배열 회전 **** 
+		// 아무 도움 없이 클리어 ㅠ
 		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
