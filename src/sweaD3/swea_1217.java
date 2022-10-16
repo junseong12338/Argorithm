@@ -13,7 +13,6 @@ public class swea_1217 {
 		int T = 10;
 		int nb = 0;
 		
-		
 		for(int TC = 1 ; TC<= T; TC++) {
 			nb=sc.nextInt();
 			int number = 0;
