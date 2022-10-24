@@ -1,5 +1,5 @@
 
-package BaekJoon_input;
+package BaekJoon_1;
 
 import java.util.Scanner;
 public class BackJoon_input_10926 {
