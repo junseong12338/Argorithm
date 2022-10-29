@@ -47,7 +47,7 @@ public class SearchAlgorithm {
 		
 		int low = 0;
 		int high = n;
-		int mid = (low+ high)/2;
+		int mid = (low + high)/2;
 		while(true) {
 			if(data[mid] == search) {
 				System.out.print("이진 검색 결과 배열의 ["+mid+"]번 째에 해당 값이 있습니다.");
