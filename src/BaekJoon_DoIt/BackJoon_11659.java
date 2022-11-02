@@ -23,13 +23,12 @@ public class BackJoon_11659 {
 		for(int i=1; i<= SuNo; i++) {
 			S[i] = S[i-1] + Integer.parseInt(stringTokenizer.nextToken());
 		}
-		
 		for(int q=0; q<quizNo; q++) {
-			
-			stringTokenizer  = new StringTokenizer(bufferedReader.readLine());
-			int i =  Integer.parseInt(stringTokenizer.nextToken());
-			int j =  Integer.parseInt(stringTokenizer.nextToken());
+		 stringTokenizer  = new StringTokenizer(bufferedReader.readLine());
+			int i = Integer.parseInt(stringTokenizer.nextToken());
+			int j = Integer.parseInt(stringTokenizer.nextToken());
 			System.out.println(S[j] - S[i-1]);
+			
 			
 		}
 	}
