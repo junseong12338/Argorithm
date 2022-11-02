@@ -15,22 +15,22 @@ public class BackJoon_2018 {
 		int sum = 1;
 		
 		while(end != N) {
-			
-			if (sum == N) {
+			if(sum == N) {
 				count++;
 				end++;
+				sum +=end;
+				
+			}
+			else if (sum < N){
+				end ++;
 				sum += end;
 			}
-			
-
 			else if (sum > N){
-				sum -= start;
+				sum -=start;
 				start++;
 			}
-			else {
-				end++;
-				sum += end;
-			}
+			
+			
 		}
 		System.out.println(count);
 		

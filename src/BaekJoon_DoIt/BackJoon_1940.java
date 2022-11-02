@@ -24,27 +24,28 @@ public class BackJoon_1940 {
 		}
 		
 		Arrays.sort(A);
-		
 		int i = 0;
 		int j = N-1;
 		int count = 0;
+		// 1 2 3 4 5 7
+		while(i < j) {
+
+			if(A[i]+A[j] == M) {
+				count++;
+				i++;
+				j--;
+			}
+			else if (A[i]+A[j] > M) {
+				j--;
+			}
+			else {
+				i++;
+			}
+			
+			
+		}
 
 		
-		while(i < j) {
-			
-			if( A[i] + A[j] < M) {
-				i++;
-			}
-		
-			else if(A[i] + A[j] > M) {
-				j--;
-			}
-			else if(A[i] + A[j] == M) {
-				i++;
-				j--;
-				count++;
-			}
-		}
 		System.out.println(count);
 		bf.close();
 	}
