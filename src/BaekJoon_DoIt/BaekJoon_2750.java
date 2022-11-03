@@ -3,7 +3,7 @@ package BaekJoon_DoIt;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
-public class BackJoon_2750 {
+public class BaekJoon_2750 {
 	// Main
 	public static void main(String[] args) {
 		
