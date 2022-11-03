@@ -4,7 +4,7 @@ package BaekJoon_DoIt;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-public class BackJoon_12891 {
+public class BaekJoon_Sliding_Window_12891_Silver2 {
 	// Main
 	
 	 static int checkArr[];

@@ -2,7 +2,7 @@ package BaekJoon_DoIt;
 
 
 import java.util.Scanner;
-public class BackJoon_2018 {
+public class BaekJoon_Two_Pointer_2018_Silver4 {
 	// Main
 	public static void main(String[] args) {
 		

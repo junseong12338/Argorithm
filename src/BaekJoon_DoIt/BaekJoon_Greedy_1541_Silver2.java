@@ -2,7 +2,7 @@ package BaekJoon_DoIt;
 
 
 import java.util.Scanner;
-public class BackJoon_1541 {
+public class BaekJoon_Greedy_1541_Silver2 {
 	// Main
 	static int answer = 0;
 	public static void main(String[] args) {

@@ -2,7 +2,7 @@ package BaekJoon_DoIt;
 
 
 import java.util.Scanner;
-public class BackJoon_1427 {
+public class BaekJoon_Selection_Sort_1427_Silver5 {
 	// Main
 	public static void main(String[] args) {
 		

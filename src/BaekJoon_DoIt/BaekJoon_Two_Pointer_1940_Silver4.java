@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
-public class BackJoon_1940 {
+public class BaekJoon_Two_Pointer_1940_Silver4 {
 	// Main
 	public static void main(String[] args) throws Exception{
 		

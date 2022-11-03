@@ -2,7 +2,7 @@ package BaekJoon_DoIt;
 
 import java.util.Arrays;
 import java.util.Scanner;
-public class BackJoon_1920 {
+public class BaekJoon_Binary_Search_1920_Silver4 {
 	// Main
 	public static void main(String[] args) {
 		

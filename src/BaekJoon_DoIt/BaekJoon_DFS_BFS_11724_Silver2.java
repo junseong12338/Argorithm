@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringTokenizer;
-public class BackJoon_11724 {
+public class BaekJoon_DFS_BFS_11724_Silver2 {
 	// Main
 
 	static int[][] graph = new int[1001][1001];

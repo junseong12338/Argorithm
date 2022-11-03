@@ -2,7 +2,7 @@ package BaekJoon_DoIt;
 
 
 import java.util.Scanner;
-public class BackJoon_11270 {
+public class BaekJoon_Prefix_Sum_11720_Bronze4 {
 	// Main
 	public static void main(String[] args) {
 		

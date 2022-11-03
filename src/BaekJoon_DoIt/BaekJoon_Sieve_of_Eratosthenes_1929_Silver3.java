@@ -2,7 +2,7 @@ package BaekJoon_DoIt;
 
 
 import java.util.Scanner;
-public class BackJoon_1929 {
+public class BaekJoon_Sieve_of_Eratosthenes_1929_Silver3 {
 	// Main
 	public static void main(String[] args) {
 		

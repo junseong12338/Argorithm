@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BackJoon_11660 {
+public class BaekJoon_Prefix_Sum_11660_Silver1 {
 	// Main
 	public static void main(String[] args) throws Exception{
 		// 다시한번 풀어보자

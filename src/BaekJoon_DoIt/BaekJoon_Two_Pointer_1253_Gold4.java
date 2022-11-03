@@ -3,7 +3,7 @@ package BaekJoon_DoIt;
 
 import java.util.Arrays;
 import java.util.Scanner;
-public class BackJoon_1253 {
+public class BaekJoon_Two_Pointer_1253_Gold4 {
 	// Main
 	public static void main(String[] args) {
 		
