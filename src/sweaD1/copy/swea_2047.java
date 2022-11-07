@@ -3,21 +3,17 @@ package sweaD1.copy;
 
 import java.util.Scanner;
 
-public class swea_2 {
+public class swea_2047 {
 
 	public static void main(String[] args) {
 		
-		// [?] 
+		// [?] 신문 헤드라인
 		
 		Scanner sc = new Scanner(System.in);
-		int T = 0;
-		T=sc.nextInt();
-		int N = 0;
 		
-		for(int TC = 1 ; TC<= T; TC++) {
-			
-		}
+		String str = sc.next().toUpperCase();
 		
+		System.out.println(str);
 	
 	}
 
