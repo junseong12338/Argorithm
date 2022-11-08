@@ -7,7 +7,7 @@ public class swea_1974 {
 
 	public static void main(String[] args) {
 		
-		// [?] 스도쿠 검증 ****
+		// [?] 스도쿠 검증 **** 백트레킹
 		
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();

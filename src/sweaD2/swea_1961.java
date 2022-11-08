@@ -7,7 +7,7 @@ public class swea_1961 {
 
 	public static void main(String[] args) {
 		
-		// [?] 숫자 배열 회전 **** 
+		// [?] 숫자 배열 회전 ****  브루트포스 알고리즘 백트래킹
 		// 아무 도움 없이 클리어 ㅠ
 		
 		Scanner sc = new Scanner(System.in);
