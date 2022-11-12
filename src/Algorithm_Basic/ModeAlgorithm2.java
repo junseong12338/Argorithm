@@ -41,7 +41,7 @@ public class ModeAlgorithm2 {
 		System.out.println();
 		
 		int[]  scores = new int[(max+1)];
-		max = Integer.MIN_VALUE;
+		
 		
 		
 		for(int i = 0; i < index.length;i++) {

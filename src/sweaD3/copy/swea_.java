@@ -1,8 +1,8 @@
 
-package sweaD2.copy;
+package sweaD3.copy;
 
 import java.util.Scanner;
-import java.io.FileInputStream;
+
 public class swea_ {
 
 	public static void main(String[] args) {
