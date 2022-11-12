@@ -2,48 +2,59 @@ package BaekJoon_DFS_BFS;
 
 
 import java.util.*;
-import java.io.*;
 public class BaekJoon_BFS_16173_Silver5 {
 	// Main
 	public static void main(String[] args) {
-		
-		// [?] 점프왕 쩰리 (Small) 
-		Scanner sc = new Scanner(System.in);
-		int N = sc.nextInt();
-		int board[][] = new int [N][N];
-		boolean visited[][] = new boolean[N][N];
-		
-		for(int i = 0; i < N; i++){
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int[][] board = new int[N][N];
+        boolean[][] visited = new boolean[N][N];
+
+        for(int i = 0; i < N; i++){
             for(int j = 0; j < N; j++){
                 board[i][j] = sc.nextInt();
                 visited[i][j] = false;
             }
         }
 
-        BFS(board, visited);
-		
-	}
+        bfs(board, visited);
 
-	private static void BFS(int[][] board, boolean[][] visited) {
-		int len = board.length;
+        sc.close();
+    }
+
+    static void bfs(int[][] board, boolean[][] visited){
+        int len = board.length;
         boolean success = false;
-        Queue<int[]> queue = new LinkedList<>(); // 큐
-        queue.add(new int[] {0, 0}); // 시작 정점 추가
-        while (!queue.isEmpty()) {
-        	int now[] = queue.poll();
-        	int x = now[0];
-        	int y = now[1];
-        	visited[x][y] = true;
-        	
-        	if(board[x][y] == -1) {
-        		success = true;
-        		break;
-        	}
-        	
-        	
-        }
-        
-		
-	}
+        Queue<int[]> que = new LinkedList<>(); // 큐
+        que.add(new int[] {0, 0}); // 시작 정점 추가
 
+        while (!que.isEmpty()) {
+            int[] focus = que.poll();
+            int r = focus[0], c = focus[1];
+            visited[r][c] = true;
+
+            if(board[r][c] == -1){
+                success = true;
+                break;
+            }
+
+            int bottom = r + board[r][c], right = c + board[r][c];
+
+            if (bottom < len && !visited[bottom][c]){
+                que.add(new int[] {r + board[r][c], c});
+                visited[bottom][c] = true;
+            }
+            if (right < len && !visited[r][right]){
+                que.add(new int[] {r, c + board[r][c]});
+                visited[r][right] = true;
+            }
+        }
+
+        if(success){
+            System.out.println("HaruHaru");
+        }else{
+            System.out.println("Hing");
+        }
+    }
 }
