@@ -2,10 +2,10 @@ package Inflean_Algorithm;
 
 import java.util.Scanner;
 
-/*1. ���� ã��
-����
-�� ���� ���ڿ��� �Է¹ް�, Ư�� ���ڸ� �Է¹޾� �ش� Ư�����ڰ� �Է¹��� ���ڿ��� �� �� �����ϴ��� �˾Ƴ��� ���α׷��� �ۼ��ϼ���.
-��ҹ��ڸ� �������� �ʽ��ϴ�.���ڿ��� ���̴� 100�� ���� �ʽ��ϴ�.*/
+/*1. 문자 찾기
+설명
+한 개의 문자열을 입력받고, 특정 문자를 입력받아 해당 특정문자가 입력받은 문자열에 몇 개 존재하는지 알아내는 프로그램을 작성하세요.
+대소문자를 구분하지 않습니다.문자열의 길이는 100을 넘지 않습 니다.*/ 
 
 //Main
 public class String_1 {
@@ -17,7 +17,7 @@ public class String_1 {
 		}
 		int answer = 0;
 
-		// ���� for
+		// 향상된 for
 		for(char x : str.toCharArray()) {
 			if (x == ch) answer++;
 		}
