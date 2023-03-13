@@ -2,7 +2,7 @@ package Inflean_Algorithm;
 
 import java.util.Scanner;
 
-/*2. 
+/*2. Å×½ºÆ®
 */
 
 //Main
