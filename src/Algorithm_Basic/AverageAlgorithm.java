@@ -3,8 +3,8 @@ package Algorithm_Basic;
 import java.util.Scanner;
 
 public class AverageAlgorithm {
-	// Æò±Õ ¾Ë°í¸®Áò
-	//[?] n¸íÀÇ Á¡¼ö Áß¿¡¼­ 80Á¡ÀÌ»ó 95Á¡ ÀÌÇÏÀÎ Á¡¼öÀÇ Æò±Õ
+	// í‰ê·  ì•Œê³ ë¦¬ì¦˜
+	//[?] nëª…ì˜ ì ìˆ˜ ì¤‘ì—ì„œ 80ì ì´ìƒ 95ì  ì´í•˜ì¸ ì ìˆ˜ì˜ í‰ê· 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int num = 0;
