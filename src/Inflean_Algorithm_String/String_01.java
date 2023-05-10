@@ -1,4 +1,4 @@
-package Inflean_Algorithm;
+package Inflean_Algorithm_String;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ import java.util.Scanner;
 대소문자를 구분하지 않습니다.문자열의 길이는 100을 넘지 않습 니다.*/ 
 
 //Main
-public class String_1 {
+public class String_01 {
 	
 	public static int solution(String str, char ch) {
 		str = str.toLowerCase();

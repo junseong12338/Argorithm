@@ -1,4 +1,4 @@
-package Inflean_Algorithm;
+package Inflean_Algorithm_String;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
 */
 
 //Main
-public class String_2 {
+public class String_02 {
 	
 	public static String solution(String str) {
 		String answer = "";
