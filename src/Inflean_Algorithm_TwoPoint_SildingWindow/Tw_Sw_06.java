@@ -1,7 +1,6 @@
 package Inflean_Algorithm_TwoPoint_SildingWindow;
 
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -21,8 +20,25 @@ public class Tw_Sw_06{
 			arr[i] = sc.nextInt();
 		}
 		
-		int count = 0;
-		int max = 0;
+		int lt = 0;
+		int count = Integer.MIN_VALUE;
+		int cnt = 0;
+		for(int rt = 0; rt < N; rt++) {
+			if(arr[rt] == 0) cnt++;
+			else count =Math.max(count,rt - lt +1);
+			
+			
+			while(cnt > M) {
+				
+				if (arr[lt] == 0)cnt--;
+				lt++;
+			}
+			
+			
+			
+		}
+		
+		System.out.println(count);
 		
 			
 	}

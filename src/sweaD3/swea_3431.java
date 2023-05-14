@@ -7,7 +7,7 @@ public class swea_3431 {
 
 	public static void main(String[] args) {
 		
-		// [?] 준환이의 운동관리
+		
 		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
@@ -15,9 +15,9 @@ public class swea_3431 {
 		int N = 0;
 		
 		for(int TC = 1 ; TC<= T; TC++) {
-			int L = 0; // 이상 해야하는 운동
-			int U = 0; // 이하 해야하는 운동
-			int X = 0; // 이번주에 한 운동
+			int L = 0; // 
+			int U = 0; //
+			int X = 0; // 
 			
 			L=sc.nextInt();
 			U=sc.nextInt();

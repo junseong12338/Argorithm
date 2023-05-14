@@ -6,7 +6,7 @@ import java.util.*;
 public class swea_15612 {
 	public static void main(String[] args) {
 		
-		// [?] Ã¼½ºÆÇ À§ÀÇ ·è ¹èÄ¡
+		
 		Scanner sc = new Scanner(System.in);
 		int T =sc.nextInt();
 
@@ -19,7 +19,7 @@ public class swea_15612 {
 				 chess[i] = sc.next();
 			}
 			
-			// °¡·Î¿­ 
+	
 			
 			for(int i=0; i<8;i++) {
 				int cnt = 0;
@@ -35,7 +35,7 @@ public class swea_15612 {
 				}
 			}
 	
-			// ¼¼·Î Çà 
+			// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 
 			
 			for(int i=0; i<8;i++) {
 				int cnt = 0;

@@ -6,14 +6,7 @@ import java.util.Scanner;
 public class swea_2817 {
 
 	public static void main(String[] args) {
-		
-		// [?] 부분 수열의 합 // 백트레킹 
-		
-		// 아이디어 백트래킹 재귀 함수 안에서 for돌면서 덧셈
-		// 조건에 맞는 답이 나올경우 count ++ 
-		
-		// 결과값 저장 int[]
-		// 방문여부 bool[]
+	
 		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
