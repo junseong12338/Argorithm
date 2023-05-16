@@ -1,7 +1,8 @@
 package Inflean_Algorithm_Hash_Map;
 
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 
 //Main
@@ -14,38 +15,42 @@ public class Hash_Map_05 {
 
 		Scanner sc = new Scanner(System.in);
 
-		String a= sc.next();
-		String b= sc.next();
 		
-		int lt = 0;
+		int n = sc.nextInt();
+		int k = sc.nextInt();
+		int answer = -1;
+		int [] arr = new int [n];
 		
-		HashMap <Character,Integer> am = new HashMap<Character, Integer>();
-		HashMap <Character,Integer> bm = new HashMap<Character, Integer>();
-		
-		for(int i = 0; i < b.length()-1; i++) {
-			am.put(a.charAt(i),am.getOrDefault(a.charAt(i), 0)+1);
+		for(int i =0; i < n; i++) {
+			arr[i] = sc.nextInt();
 		}
 		
-		for(int i = 0; i < b.length(); i++) {
-			bm.put(b.charAt(i),bm.getOrDefault(b.charAt(i), 0)+1);
-		}
+		TreeSet<Integer> Tset = new TreeSet<Integer>(Collections.reverseOrder());
 		
-		int count = 0;
-		for(int rt =b.length()-1; rt < a.length(); rt++) {
-			am.put(a.charAt(rt),am.getOrDefault(a.charAt(rt), 0)+1);
-			
-			if(am.equals(bm)) {
-				count++;
+		for(int i = 0; i < n; i ++) {
+			for (int j = i+1; j <n; j++) {
+				for(int l = j+1; l<n; l++) {
+					Tset.add(arr[i]+arr[j]+arr[l]);
+				}
 			}
-			
-			am.put(a.charAt(lt),am.get(a.charAt(lt))-1);
-			if(am.get(a.charAt(lt)) == 0) am.remove(a.charAt(lt));
-			lt++;
-			
-
-			
 		}
-		System.out.println(count);
+		
+		int cnt =0;
+		
+//		Tset.remove(100); 100 지운다
+//		Tset.size(); 크기
+//		Tset.first(); 첫번째 값
+//		Tset.last(); 마지막 값
+		for( int x : Tset) {
+			cnt ++;
+			
+			if(cnt == k) {
+				answer = x;
+				break;
+			}
+		}
+		
+		System.out.println(answer);
 
 	}
 
