@@ -18,17 +18,16 @@ public class Sorting_Searching_03 {
 		
 		for(int i = 0; i < n; i++) arr[i] = sc.nextInt();
 		
-		for(int i = 0; i < n-1; i++) {
+		for(int i = 1; i < n; i++) {
+			int tmp = arr[i],j;
 			
-			for (int j = 0; j < n-i-1; j++) {
-				int tmp = 0;
-				if(arr[j] > arr[j+1]) {
-					tmp = arr[j];
-					arr[j] = arr[j+1];
-					arr[j+1] =tmp;
-				}
-				
+			for (j = i-1; j>=0; j--) {
+				if(arr[j] > tmp) arr[j+1] = arr[j];
+				else break;
 			}
+			arr[j+1] = tmp;
+			
+			
 		}
 		
 		for(int i = 0; i < n; i++) System.out.print(arr[i]+" "); 
