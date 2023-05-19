@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class BaekJoon12 {
 	public static void main(String[] args) {
 		
-		// [?] 짐 챙기는 숌 1817 진짜 모름 시발
+		// [?] 짐 챙기는 숌 1817
 		Scanner sc = new Scanner(System.in);
 
 		int N = sc.nextInt();
