@@ -6,8 +6,6 @@ import java.util.Scanner;
 
 
 
-
-
 class Point implements Comparable<Point>{
 
 	public int x, y;
