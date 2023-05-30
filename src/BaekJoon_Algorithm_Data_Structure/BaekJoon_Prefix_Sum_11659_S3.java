@@ -1,4 +1,4 @@
-package BaekJoon_Algorithm_DoIt_Data_Structure;
+package BaekJoon_Algorithm_Data_Structure;
 
 import java.util.Scanner;
 public class BaekJoon_Prefix_Sum_11659_S3 {

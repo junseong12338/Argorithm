@@ -1,4 +1,4 @@
-package BaekJoon_Algorithm_DoIt_Data_Structure;
+package BaekJoon_Algorithm_Data_Structure;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
