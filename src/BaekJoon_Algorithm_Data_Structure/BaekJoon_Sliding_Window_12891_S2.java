@@ -8,14 +8,14 @@ import java.util.StringTokenizer;
 
 
 public class BaekJoon_Sliding_Window_12891_S2 {
+	// Main
+	
 	static int myArr[];
 	static int checkArr [];
 	static int checkSerct = 0;
-	// Main
 	public static void main(String[] args) throws Exception{
 		
 		// [?] DNA 비밀번호 
-		
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(bf.readLine());
 		

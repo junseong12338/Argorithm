@@ -2,9 +2,9 @@ package BaekJoon_Algorithm_Data_Structure;
 
 import java.util.Scanner;
 
-// Main
+
 public class BaekJoon_Sliding_Window_21921_S3 {
-	
+	// Main
 	public static void main(String[] args) throws Exception{
 		// [?] 블로그
 		Scanner sc = new Scanner(System.in);
