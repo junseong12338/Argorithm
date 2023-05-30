@@ -4,9 +4,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-
-
-
 public class BaekJoon_Sliding_Window_12891_S2 {
 	// Main
 	
@@ -40,18 +37,18 @@ public class BaekJoon_Sliding_Window_12891_S2 {
 		}
 		
 		
-		for(int i=0; i<P; i++) {
+		for(int i=0; i<P; i++) { 
 			Add(A[i]);
 		}
 		
-		if(checkSerct == 4) Result++;
+		if(checkSerct == 4) Result++; // 조건 충족 확인
 		
-		
+		// 슬라이딩 윈도우 처리
 		for(int rt = P; rt<S; rt++) {
 			int lt = rt-P;
 			Add(A[rt]);
 			Remove(A[lt]);
-			if(checkSerct == 4) Result++;
+			if(checkSerct == 4) Result++; // 조건 충족 확인
 		}
 		
 		System.out.println(Result);
@@ -61,7 +58,7 @@ public class BaekJoon_Sliding_Window_12891_S2 {
 
 
 
-	private static void Add(char c) {
+	private static void Add(char c) { // 새로 들어온 문자를 처리하는 함수 
 		
 		switch (c) {
 		
@@ -89,7 +86,7 @@ public class BaekJoon_Sliding_Window_12891_S2 {
 	}
 	
 	
-	private static void Remove(char c) {
+	private static void Remove(char c) { // 제거되는 문자를 처리하는 함수
 		switch (c) {
 		
 		case 'A':

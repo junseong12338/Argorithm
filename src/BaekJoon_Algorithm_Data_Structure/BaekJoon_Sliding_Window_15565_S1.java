@@ -26,7 +26,6 @@ public class BaekJoon_Sliding_Window_15565_S1 {
 	                while (dolls[lt] == 2) lt++;
 	             
 	                minSize = Math.min(minSize, rt - lt + 1);
-	                System.out.println(lt);
 	                check--;
 	                lt++;
 	            }
