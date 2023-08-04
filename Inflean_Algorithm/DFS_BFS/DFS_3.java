@@ -1,36 +1,25 @@
 package DFS_BFS;
 
 
-
-// 부분집합 구하기
+// Tree 말단노드까지의 까장 짧은 경로(DFS)
 public class DFS_3 {
 	
 	static Node root; 
-	static int n;
-	static int [] ch;
-	public static void DFS(int L){ 
-	    
-		if(L== n+1) {
-			String tmp = "";
-			for(int i = 1; i <=n; i++) {
-				if(ch[i] == 1)tmp +=(i+" ");
-			}
-			if(tmp.length()>0) System.out.println(tmp);
-		}else {
-			ch[L] = 1;
-			DFS(L+1);
-			ch[L] = 0;
-			DFS(L+1);
-		}
-
+	public static int DFS(int L, Node root){ 
+	    if(root.lt == null && root.rt == null) return L;
+	    else return Math.min(DFS(L+1, root.lt), DFS(L+1,root.rt));
 	} 
 	
 
 	public static void main(String[] args) {
 		
-		n = 3;
-		ch = new int [n+1];
-		DFS(1);
+		root = new Node(1);
+		root.lt = new Node(2);
+		root.rt = new Node(3);
+		root.lt.lt = new Node(4);
+		root.lt.rt = new Node(5);
+
+		System.out.println(DFS(0,root));
 	}
 }
 
