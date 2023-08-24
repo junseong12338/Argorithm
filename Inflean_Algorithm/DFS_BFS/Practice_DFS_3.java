@@ -2,33 +2,37 @@ package DFS_BFS;
 
 import java.util.Scanner;
 
-// 바둑이 승차 (DFS)
+// 최대 점수 구하기(DFS)
 public class Practice_DFS_3 {
 	
-	static int answer = Integer.MIN_VALUE,c,n;
-	public static void DFS(int L, int sum, int[] arr){ 
+	static int answer = Integer.MIN_VALUE,n,m;
+	static boolean flag= false;
+	public static void DFS(int L, int sum, int time, int[] ps, int[] pt){ 
 		
-		if(sum > c) return;
-		if(L == n) {
+		if(time > m)return;
+		if(L==n) {
 			answer = Math.max(answer, sum);
 		}
 		else {
-			DFS(L+1, sum+arr[L], arr); // 부분집합 1 바둑이가 탔을 때
-			DFS(L+1, sum, arr);		   // 부분집합 2 바둑이가 타지 않았을 때
+			DFS(L+1, sum+ps[L],time+pt[L],ps,pt);
+			DFS(L+1, sum,time,ps,pt);
+
 		}
 }
-
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		c = sc.nextInt();
 		n = sc.nextInt();
-		int[] arr = new int[n];
-		for(int i = 0; i < n; i++) {
-			arr[i] = sc.nextInt();
-		}
+		m = sc.nextInt();
 		
-		DFS(0,0,arr);
+		int [] a = new int [n];
+		int [] b = new int [n];
+		
+		for(int i = 0; i < n; i++) {
+			a[i] = sc.nextInt();
+			b[i] = sc.nextInt();
+		}
+		DFS(0,0,0,a,b);
 		System.out.println(answer);
 		
 	}
