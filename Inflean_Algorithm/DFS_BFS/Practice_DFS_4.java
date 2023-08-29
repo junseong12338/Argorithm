@@ -7,8 +7,7 @@ public class Practice_DFS_4 {
 	
 	static int n,m;
 	static int[] pm;
-
-	public static void DFS(int L){ 
+	public static void DFS(int L){
 		if(L==m) {
 			for(int x : pm) System.out.print(x+" ");
 			System.out.println();
@@ -16,6 +15,7 @@ public class Practice_DFS_4 {
 			for(int i = 1; i<= n; i++) {
 				pm[L]=i;
 				DFS(L+1);
+
 			}
 		}
 		

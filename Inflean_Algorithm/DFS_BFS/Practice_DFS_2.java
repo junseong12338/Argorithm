@@ -2,7 +2,7 @@ package DFS_BFS;
 
 import java.util.Scanner;
 
-// 바둑이 승차 (DFS)
+// 합이 같은 부분집합 바둑이 승차 (DFS)
 public class Practice_DFS_2 {
 	
 	static int answer = Integer.MIN_VALUE,c,n;
