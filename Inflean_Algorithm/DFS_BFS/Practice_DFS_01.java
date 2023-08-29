@@ -3,7 +3,7 @@ package DFS_BFS;
 import java.util.Scanner;
 
 // 합이 같은 부분집합(DFS : 아마존 인터뷰)
-public class Practice_DFS_1 {
+public class Practice_DFS_01 {
 	
 	static String answer = "NO";
 	static int n, total = 0;

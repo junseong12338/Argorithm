@@ -4,7 +4,7 @@ import java.util.*;
 
 // 중복순열 동전 교환(DFS)
 // Main 
-public class Practice_DFS_5 {
+public class Practice_DFS_05 {
 	
 	static int n,m;
 	 

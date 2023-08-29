@@ -3,7 +3,7 @@ package DFS_BFS;
 import java.util.Scanner;
 
 // 합이 같은 부분집합 최대 점수 구하기(DFS)
-public class Practice_DFS_3 {
+public class Practice_DFS_03 {
 	
 	static int answer = Integer.MIN_VALUE,n,m;
 	static boolean flag= false;

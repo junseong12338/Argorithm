@@ -4,7 +4,7 @@ import java.util.*;
 
 // 순열 구하기(DFS)
 // Main 
-public class Practice_DFS_6 {
+public class Practice_DFS_06 {
 	static int[] pm , ch,arr;
 	static int n,m;
 

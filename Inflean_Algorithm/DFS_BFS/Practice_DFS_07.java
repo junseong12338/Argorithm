@@ -4,7 +4,7 @@ import java.util.*;
 
 // 조합수 메모이제이션(DFS)
 // Main 
-public class Practice_DFS_7 {
+public class Practice_DFS_07 {
 	static int [][] dy = new int[35][35];
 	public static int DFS(int n, int r){
 		if(dy[n][r] > 0) return dy[n][r];

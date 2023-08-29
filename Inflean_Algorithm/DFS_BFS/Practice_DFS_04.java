@@ -3,7 +3,7 @@ package DFS_BFS;
 import java.util.Scanner;
 
 // 중복순열 구하기(DFS)
-public class Practice_DFS_4 {
+public class Practice_DFS_04 {
 	
 	static int n,m;
 	static int[] pm;
