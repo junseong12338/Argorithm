@@ -5,13 +5,14 @@ import java.util.*;
 // 미로탐색(BFS) 최단거리
 // Main 
 
-class Point{
-	public int x,y;
-	public Point(int x, int y) {
-		this.x = x;
-		this.y = y;
-	}
-}
+//class Point{
+//	public int x,y;
+//	public Point(int x, int y) {
+//		this.x = x;
+//		this.y = y;
+//	}
+//}
+
 public class Practice_BFS_11 {
 
 
@@ -19,6 +20,7 @@ public class Practice_BFS_11 {
 	public static int [] dy = {0,1,0,-1};
 	public static int[][] board, dis;
 	public static void BFS(int x, int y) {
+	
 		Queue<Point> Q = new LinkedList<>();
 		Q.offer(new Point(x,y));
 		board[x][y] = 1;
