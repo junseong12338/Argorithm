@@ -4,13 +4,7 @@ import java.util.*;
 
 // 섬나라 아일랜드 (BFS)
 // Main 
-class Point{
-	public int x,y;
-	public Point(int x, int y) {
-		this.x = x;
-		this.y = y;
-	}
-}
+
 public class Practice_BFS_14 {
 	public static int  answer = 0,n;
 	public static int[] dx = {-1,-1,0,1,1,1,0,-1};
