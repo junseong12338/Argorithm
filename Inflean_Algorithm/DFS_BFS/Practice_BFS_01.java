@@ -13,7 +13,7 @@ import java.util.*;
 //	}
 //}
 
-public class Practice_BFS_11 {
+public class Practice_BFS_01 {
 
 
 	public static int [] dx = {-1,0,1,0};

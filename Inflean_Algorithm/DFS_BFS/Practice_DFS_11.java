@@ -2,31 +2,22 @@ package DFS_BFS;
 
 import java.util.*;
 
-// 섬나라 아일랜드 (BFS)
+// 섬나라 아일랜드 (DFS)
 // Main 
-
-public class Practice_BFS_14 {
+public class Practice_DFS_11 {
 	public static int  answer = 0,n;
 	public static int[] dx = {-1,-1,0,1,1,1,0,-1};
 	public static int[] dy = {0,1,1,1,0,-1,-1,-1};
-	
-	public static Queue<Point> queue = new LinkedList<Point>();
-	
-	public static void BFS(int x, int y,int[][] board) {
-		queue.add(new Point(x,y));
-		while(!queue.isEmpty()) {
-			Point pos = queue.poll();
-			
-			for(int i=0; i<8;i++) {
-				int nx=pos.x+dx[i];
-				int ny=pos.y+dy[i];
-				if(nx>=0 && nx<n && ny>=0 && ny<n && board[nx][ny]==1) {
-					board[nx][ny] = 0;
-					queue.add(new Point(nx,ny));
-				}
+
+	public static void DFS(int x, int y,int[][] board) {
+		for(int i=0; i<8;i++) {
+			int nx=x+dx[i];
+			int ny=y+dy[i];
+			if(nx>=0 && nx<n && ny>=0 && ny<n && board[nx][ny]==1) {
+				board[nx][ny] =0;
+				DFS(nx,ny,board);
 			}
 		}
-
 	}
 	public static void solution(int[][] board) {
 		for(int i =0; i<n; i++ ) {
@@ -34,7 +25,7 @@ public class Practice_BFS_14 {
 				if(board[i][j] ==1) {
 					answer++;
 					board[i][j] = 0;
-					BFS(i,j,board);
+					DFS(i,j,board);
 				}
 			}
 		}

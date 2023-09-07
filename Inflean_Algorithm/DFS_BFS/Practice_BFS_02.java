@@ -11,7 +11,7 @@ import java.util.*;
 //		this.y = y;
 //	}
 //}
-public class Practice_BFS_12 {
+public class Practice_BFS_02 {
 
 
 	public static int [] dx = {-1,0,1,0};
