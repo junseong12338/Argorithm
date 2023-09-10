@@ -33,6 +33,8 @@ public class Practice_DFS_12 {
 			for(int i=s; i<len; i++) {
 				combi[L] = i;
 				DFS(L+1, i+1);
+				
+				
 			}
 		}
 		
