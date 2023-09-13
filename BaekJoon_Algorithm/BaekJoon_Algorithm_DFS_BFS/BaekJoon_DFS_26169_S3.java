@@ -44,7 +44,6 @@ public class BaekJoon_DFS_26169_S3 {
 	            int xx = x + nx[i];
 	            int yy = y + ny[i];
 
-	            // 배열의 범위 밖으로 벗어나거나 벽인 경우 이동을 안 함
 	            if (xx < 0 || xx >= 5 || yy < 0 || yy >= 5 || board[xx][yy] == -1) continue;
 	            
 	            board[x][y] = -1;
