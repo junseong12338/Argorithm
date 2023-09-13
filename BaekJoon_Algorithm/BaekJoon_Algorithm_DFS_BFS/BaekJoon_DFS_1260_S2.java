@@ -21,23 +21,23 @@ public class BaekJoon_DFS_1260_S2 {
 			A[i] = new ArrayList<Integer>();
 		}
 		
-		for(int i = 0; i < N; i++) {
+		for(int i = 0; i < M; i++) {
 			int S = sc.nextInt();
 			int E = sc.nextInt();
 			
 			A[S].add(E);
 			A[E].add(S);
 		}
-		System.out.println();
+		
+		for(int i=1; i<=N; i++) {
+			Collections.sort(A[i]);
+		}
 		visited = new boolean [N+1];
 		DFS(start);
 		System.out.println();
 		visited = new boolean [N+1];
 		BFS(start);
-		
-	}
-	private static void BFS(int start) {
-		// TODO Auto-generated method stub
+		System.out.println();
 		
 	}
 	private static void DFS(int Node) {
@@ -47,5 +47,23 @@ public class BaekJoon_DFS_1260_S2 {
 			if(!visited[i])
 			DFS(i);
 		}
+	}
+	
+	private static void BFS(int Node) {
+		Queue<Integer> queue = new LinkedList<Integer>();
+		queue.add(Node);
+		visited[Node] = true;
+		
+		while(!queue.isEmpty()) {
+			int now_Node = queue.poll();
+			System.out.print(now_Node+" ");
+			for(int i : A[now_Node]) {
+				if(!visited[i]) {
+					visited[i] = true;
+					queue.add(i);
+				}
+			}
+		}
+		
 	}
 }
