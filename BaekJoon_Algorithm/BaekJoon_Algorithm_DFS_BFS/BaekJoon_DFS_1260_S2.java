@@ -13,6 +13,7 @@ public class BaekJoon_DFS_1260_S2 {
 		int M = sc.nextInt();
 		int start = sc.nextInt();
 		
+		
 		A = new ArrayList[N+1];
 		
 		for(int i = 1; i <= N; i++) {
