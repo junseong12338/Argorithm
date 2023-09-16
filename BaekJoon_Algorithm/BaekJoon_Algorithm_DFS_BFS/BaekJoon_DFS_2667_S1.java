@@ -11,6 +11,7 @@ public class BaekJoon_DFS_2667_S1 {
 	static int[] dc = {0,0,-1,1}; // 상하좌우
 	
 	public static void main(String[] args) {
+		 
 		
 		// [?] 단지번호붙이기 S1
 		Scanner sc = new Scanner(System.in);
