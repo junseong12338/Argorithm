@@ -13,7 +13,7 @@ public class BaekJoon_DFS_2667_S1 {
 	public static void main(String[] args) {
 		 
 		
-		// [?] 단지번호붙이기 S1
+		// [?] 단지번호붙이기 S1 -- 2
 		Scanner sc = new Scanner(System.in);
 		N = sc.nextInt();
 		map = new int[N][N];
