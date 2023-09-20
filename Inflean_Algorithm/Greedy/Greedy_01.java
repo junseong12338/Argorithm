@@ -5,59 +5,47 @@ import java.util.Collections;
 import java.util.Scanner;
 
 
+//Main
+class Point implements Comparable<Point>{
 
-
-class Body implements Comparable<Body>{
-
-	public int h, w;
-	Body(int h, int w){
-		this.h=h;
-		this.w=w;
+	public int x, y;
+	Point(int x, int y){
+		this.x=x;
+		this.y=y;
 	}
 	
-	@Override
-	public int compareTo(Body o) {
-		return o.h -this.h;
+	@Override // 오름 차순
+	public int compareTo(Point o) {
+		if(this.x==o.x) return o.y- this.y;
+		else  return o.x-this.x;
 	}
 	
 }
-
-//Main
 public class Greedy_01 {
-	
-
-
-	public static void main(String[] args) {
-
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		int cnt = 0;
-		ArrayList<Body> arr =new ArrayList<>();
-		
-		for(int i = 0; i <n; i++) {
-			int h =sc.nextInt();
-			int w =sc.nextInt();
-			arr.add(new Body(h, w));
-
-		}
-		
-		
-		Collections.sort(arr);
-		
-		
-		int max = Integer.MIN_VALUE;
-		
-		
-		
-		
-		for(Body o : arr) {
+		public static void main(String[] args) {
 			
-			if(o.w > max) {
-				max = o.w;
-				cnt ++;
+			Scanner sc = new Scanner(System.in);
+			int n = sc.nextInt();
+			ArrayList<Point> arr = new ArrayList<Point>();
+			int count = 0;
+			int max = Integer.MIN_VALUE;
+			for(int i=0; i<n; i++) {
+				int height = sc.nextInt();
+				int weight = sc.nextInt();
+				arr.add(new Point(height,weight));
 			}
-		}
-		System.out.println(cnt);
+			
+			Collections.sort(arr);
+			
+			for(int i=0; i<n; i++) {
+				if(arr.get(i).y > max) {
+					max = arr.get(i).y;
+					count++;
+				}
+			}
+
+			System.out.println(count);
+		 
 	}
 
 }

@@ -14,26 +14,20 @@ class Point implements Comparable<Point>{
 		this.y=y;
 	}
 	
-	@Override
+	@Override // 오름 차순
 	public int compareTo(Point o) {
-		
 		if(this.x==o.x) return this.y-o.y;
 		else  return this.x-o.x;
-		
 	}
 	
 }
 //Main
 public class Sorting_Searching_07 {
-
-
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		
-		int n = sc.nextInt();
-				
-		ArrayList<Point> arr =new ArrayList<>();
+		int n = sc.nextInt();	
+		ArrayList<Point> arr = new ArrayList<>();
 		
 		for(int i = 0; i <n; i++) {
 			int x =sc.nextInt();
