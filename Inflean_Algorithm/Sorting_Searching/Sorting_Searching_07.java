@@ -14,7 +14,7 @@ class Point implements Comparable<Point>{
 		this.y=y;
 	}
 	
-	@Override // 오름 차순
+	@Override // 오름차순
 	public int compareTo(Point o) {
 		if(this.x==o.x) return this.y-o.y;
 		else  return this.x-o.x;
