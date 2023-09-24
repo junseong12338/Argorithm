@@ -39,7 +39,6 @@ public class Greedy_02 {
 			if(check <=arr.get(i).s) {
 				check = arr.get(i).e;
 				count++;
-				
 			}
 			
 			

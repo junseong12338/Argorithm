@@ -1,9 +1,11 @@
 package Greedy;
 
 import java.util.*;
-import java.io.*;
+
+
 //Main
-public class Greedy_ {
+
+public class Greedy_03 {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
