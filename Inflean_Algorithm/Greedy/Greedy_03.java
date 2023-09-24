@@ -3,18 +3,18 @@ package Greedy;
 import java.util.*;
 
 //Main
-class Friend implements Comparable<Friend>{
-	int in;
-	int out;
+class Reception implements Comparable<Reception>{
+	int  time;
+	char state;
 	
-	Friend(int in, int out){
-		this.in = in;
-		this.out = out;
+	Reception(int time, char state){
+		this.time = time;
+		this.state = state;
 	}
 	@Override
-	public int compareTo(Friend o) {
-		if(this.in == o.in) return this.out-o.out;
-		else return this.in-o.in;
+	public int compareTo(Reception o) {
+		if(this.time == o.time) return this.state-o.state;
+		else return this.time-o.time;
 	}
 	
 }
@@ -25,24 +25,25 @@ public class Greedy_03 {
 		
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		int check = 1;
+		int check = 0;
 		int max = Integer.MIN_VALUE;
-		ArrayList<Friend> arr = new ArrayList<Friend>();
+		ArrayList<Reception> A = new ArrayList<Reception>();
 		
 		for(int i = 0; i < n; i++) {
-			int in  = sc.nextInt();
-			int out = sc.nextInt();
-			arr.add(new Friend(in,out));
+			int sT  = sc.nextInt();
+			int eT =  sc.nextInt();
+			
+			A.add(new Reception(sT,'s'));
+			A.add(new Reception(eT,'e'));
 		}
 		
-		Collections.sort(arr);
-		int ch_out = arr.get(0).out;
+		Collections.sort(A);
 		
-		for(Friend ob : arr) {
-			if(ob.in == ch)
+		for(Reception ob : A) {
+			if(ob.state=='s') check++;
+			else check --;
+			max = Math.max(max, check);
 		}
-		
-		
 		
 		System.out.println(max);
 	}
