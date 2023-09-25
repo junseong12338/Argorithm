@@ -14,8 +14,8 @@ class Lecture implements Comparable<Lecture> {
 	
 	@Override
 	public int compareTo(Lecture o) {
-		if(this.money == o.money) return this.time - o.time;
-		return this.money-money;
+		 return o.time - this.time;
+		
 	}
 }
 
@@ -36,15 +36,27 @@ public class Greedy_04 {
 			A.add(new Lecture(m,d));
 			if(d>max) max =d;
 		}
-		System.out.println(Solution(A));
+		PriorityQueue<Integer> pQ = new PriorityQueue<>(Collections.reverseOrder());
+		int answer = 0;
+		Collections.sort(A);
+		int j = 0;
+		for(int i = max; i >= 1; i--) {
+			for(; j < n; j++) {
+				if(A.get(j).time<i) {
+					break;
+				}
+				pQ.offer(A.get(j).money);
+			}
+			if(!pQ.isEmpty()) answer+= pQ.poll();
+			
+		}
+		
+		
+		System.out.println(answer);
 		
 	}
 
-	private static int Solution(ArrayList<Lecture> a) {
-		PriorityQueue<Integer> pQ = new PriorityQueue<>(Collections.reverseOrder());
-		int answer = 0;
-		return answer;
-	}
+
 
 
 }
