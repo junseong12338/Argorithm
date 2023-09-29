@@ -2,7 +2,7 @@ package DFS_BFS;
 
 
 // Tree 말단노드까지의 까장 짧은 경로(DFS)
-public class DFS_3 {
+public class DFS_03 {
 	
 	static Node root; 
 	public static int DFS(int L, Node root){ 

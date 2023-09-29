@@ -3,7 +3,7 @@ package DFS_BFS;
 
 
 // 부분집합 구하기
-public class DFS_2 {
+public class DFS_02 {
 	
 	static Node root; 
 	static int n;

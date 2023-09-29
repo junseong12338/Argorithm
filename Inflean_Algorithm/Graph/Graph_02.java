@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class Graph_2 {
+public class Graph_02 {
 	// 그래프 최단거리 BFS
 	static int n,m; 
 	static ArrayList<ArrayList<Integer>> graph;

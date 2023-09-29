@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 // 경로 탐색 인접 행렬
-public class DFS_5 {
+public class DFS_05 {
 	static int n,m, answer = 0;
 	static ArrayList<Integer>[] A;
 	static int[] ch;

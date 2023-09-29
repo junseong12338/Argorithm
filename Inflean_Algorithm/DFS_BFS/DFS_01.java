@@ -15,7 +15,7 @@ class Node{
 	}
 }
 
-public class DFS_1 {
+public class DFS_01 {
 	
 	static Node root; 
 	public static void DFS(Node root){ 

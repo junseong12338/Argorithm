@@ -12,7 +12,7 @@ import java.util.Queue;
 //		rt = null;
 //	}
 //}
-public class BFS_1 {
+public class BFS_01 {
 	
 	static Node root; 
 	public static void BFS(Node root){ 

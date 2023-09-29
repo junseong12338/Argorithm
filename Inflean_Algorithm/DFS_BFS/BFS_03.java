@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 // Tree 말단노드까지의 까장 짧은 경로(BFS)
-public class BFS_3 {
+public class BFS_03 {
 	
 	static Node root; 
 	public static int BFS(Node root){ 

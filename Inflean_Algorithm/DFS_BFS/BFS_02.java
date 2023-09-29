@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 // 송아지 찾기 BFS
 
-public class BFS_2 {
+public class BFS_02 {
 	static int answer = 0;
 	static int dis[] = {1,-1,5};
 	static int ch [] = new int [100001];

@@ -3,7 +3,7 @@ package DFS_BFS;
 import java.util.Scanner;
 
 // 경로 탐색 인접 행렬
-public class DFS_4 {
+public class DFS_04 {
 	static int n,m, answer = 0;
 	static int[][] graph;
 	static int[] ch;

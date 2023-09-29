@@ -3,7 +3,7 @@ package Graph;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Graph_1 {
+public class Graph_01 {
 
 	static int n,m,answer =0; 
 	static ArrayList<ArrayList<Integer>> graph;
