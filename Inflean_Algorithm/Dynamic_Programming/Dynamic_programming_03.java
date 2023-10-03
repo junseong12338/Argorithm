@@ -14,9 +14,8 @@ public class Dynamic_programming_03 {
 		for(int i = 0 ; i < n; i++) {
 			arr[i] = sc.nextInt();
 		}
-				
 		dy[0] = 1;
-
+		
 		for(int i = 1 ; i < n; i++) {
 			int max = 0;
 			for(int j = i-1; j >=0; j--) {
