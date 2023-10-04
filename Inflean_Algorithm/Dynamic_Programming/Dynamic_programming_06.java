@@ -19,6 +19,7 @@ public class Dynamic_programming_06 {
 				dy[j] = Math.max(dy[j],dy[j-pt] + ps);
 			}
 			
+			
 		}
 		System.out.println(dy[m]);
 		
