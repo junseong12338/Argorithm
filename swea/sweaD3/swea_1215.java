@@ -6,27 +6,27 @@ public class swea_1215 {
 
 	public static void main(String[] args) {
 		
-		// [?] 1215. [S/W 문제해결 기본] 3일차 - 회문1
+	// [?] 1215. [S/W 문제해결 기본] 3일차 - 회문1
 		
 		Scanner sc = new Scanner(System.in);
-		int T = 10;
+		int T = 1;
 			
 		for(int TC = 1 ; TC<= T; TC++) {
 			int count = 0;
 			int n = sc.nextInt();
-			String map1[] = new String[8];	
+			String map[] = new String[8];	
 			String map2[] = new String[8];	
 			char ch[][] = new char[8][8];
+			
 			int ck = n-1;
 			
 			for(int i = 0; i < 8; i++) {
-				map1[i] = sc.next();
+				map[i] = sc.next();
 				map2[i] ="";
 				for(int j = 0; j < 8; j++) {
-					ch[i][j] = map1[i].charAt(j);
+					ch[i][j] = map[i].charAt(j);
 				}
 			}
-			// 세로 값 입력
 			for(int i = 0; i < 8; i++) {
 				for(int j = 0; j < 8; j++) {
 					map2[i] += ch[j][i];
@@ -39,38 +39,46 @@ public class swea_1215 {
 			for(int i = 0; i < 8; i++) {
 				for(int j = 0; j < 8; j++) {
 					if(n+j <= 8) {
-						String str = (String) map1[i].subSequence(j, n+j);
+						String str = (String) map[i].subSequence(j, n+j);
+						
 						for(int k = 0; k < str.length(); k++) {
-							
-							if (str.charAt(k) == str.charAt(ck) && ck > 0) ck--;
-							else {
-								ck  = n-1;
+							if(ck == 0) count++;
+							if (str.charAt(k) == str.charAt(ck) && ck > 0) {
+								ck--;
+								
+							}else {
+								ck = n-1;
 								break;
 							}
-							if(ck == 0) count++;
+							
 						}
+						
+						
 					}
 				}
 			
 			}
-			
+		
 			ck = n-1;
 			// 세로 계산
 			
 			for(int i = 0; i < 8; i++) {
 				for(int j = 0; j < 8; j++) {
 					if(n+j <= 8) {
-						
 						String str = (String) map2[i].subSequence(j, n+j);
+						
 						for(int k = 0; k < str.length(); k++) {
-							if (str.charAt(k) == str.charAt(ck) && ck > 0) ck--;
-							else {
+							if(ck == 0) count++;
+							if (str.charAt(k) == str.charAt(ck) && ck > 0) {
+								ck--;
+							}else {
 								ck  = n-1;
 								break;
 							}
-							
-							if(ck == 0) count++;
+						
 						}
+					
+						
 					}
 				}
 			}			
