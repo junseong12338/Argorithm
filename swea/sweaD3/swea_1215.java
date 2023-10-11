@@ -6,7 +6,7 @@ public class swea_1215 {
 
 	public static void main(String[] args) {
 		
-	// [?] 1215. [S/W 문제해결 기본] 3일차 - 회문1
+		// [?] 1215. [S/W 문제해결 기본] 3일차 - 회문1
 		
 		Scanner sc = new Scanner(System.in);
 		int T = 1;

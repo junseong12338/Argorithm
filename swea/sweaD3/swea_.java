@@ -16,8 +16,5 @@ public class swea_ {
 		for(int TC = 1 ; TC<= T; TC++) {
 			
 		}
-		
-	
 	}
-
 }
