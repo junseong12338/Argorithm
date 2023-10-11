@@ -36,14 +36,10 @@ public class swea_1220 {
 							
 						}
 					}
-
 				}
 			}
+			
 			System.out.println("#"+TC+" "+count);
-
 		}
-		
-	
 	}
-
 }
