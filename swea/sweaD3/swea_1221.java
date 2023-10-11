@@ -2,7 +2,7 @@ package sweaD3;
 
 import java.util.Scanner;
 
-public class swea_ {
+public class swea_1221 {
 
 	public static void main(String[] args) {
 		
