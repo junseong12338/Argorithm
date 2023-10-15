@@ -15,23 +15,21 @@ public class swea_1860 {
 		
 		
 		for(int TC = 1 ; TC<= T; TC++) {
+			String answer = "Possible";
 			int N = sc.nextInt(); // 팔려는 손님
 			int M = sc.nextInt(); // 시간안에 만들수 있는 붕어빵
 			int K = sc.nextInt(); // 그 갯수 
+			int list[] = new int [N];
+			int fish = 0; // 만들어진 붕어빵
+			int count = 0; // 손님 수 
 			
-			int P[] = new int [N];
-			int Ti = 0;
-			boolean  flag = false;
-			
-			for(int  i = 0; i < N; i++) P[i] = sc.nextInt();
-			
-			Arrays.sort(P);
-			String answer = "Possible";
-			int count = 0;
+			for(int  i = 0; i < N; i++) list[i] = sc.nextInt();
+			Arrays.sort(list); // 순차적으로 붕어빵을 제공해야하기에 오름차순으로 정렬
+
 			for(int  i = 0; i < N; i++) {
-				Ti = (P[i] / M) * K;
+				fish = (list[i] / M) * K;
 				count++;
-				if(Ti < count) {
+				if(fish < count) {
 					answer = "Impossible";
 					break;
 				}
