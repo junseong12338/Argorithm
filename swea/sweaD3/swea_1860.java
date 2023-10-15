@@ -1,5 +1,6 @@
 package sweaD3;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class swea_1860 {
@@ -19,18 +20,25 @@ public class swea_1860 {
 			int K = sc.nextInt(); // 그 갯수 
 			
 			int P[] = new int [N];
-			int Ti[] = new int [N];
+			int Ti = 0;
 			boolean  flag = false;
-
-			for(int  i = 0; i < N; i++) {
 			
-				P[i] = sc.nextInt();
-				Ti[i] = P[i] / M;
-				Ti[i] *=M;
-				
-	
-				
+			for(int  i = 0; i < N; i++) P[i] = sc.nextInt();
+			
+			Arrays.sort(P);
+			String answer = "Possible";
+			int count = 0;
+			for(int  i = 0; i < N; i++) {
+				Ti = (P[i] / M) * K;
+				count++;
+				if(Ti < count) {
+					answer = "Impossible";
+					break;
+				}
+
 			}
+			System.out.println("#"+TC+" "+answer);
+			
 		}
 	}
 }
