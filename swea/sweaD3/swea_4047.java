@@ -6,7 +6,7 @@ public class swea_4047 {
 
 	public static void main(String[] args) {
 		
-		// [?] 
+		// [?] 4047. 영준이의 카드 카운팅
 		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
@@ -14,80 +14,69 @@ public class swea_4047 {
 		int N = 0;
 		
 		for(int TC = 1 ; TC<= T; TC++) {
-			String S[] = {"01","02","03","04","05","06","07","08","09","10","11","12","13"};
-			String D[] = {"01","02","03","04","05","06","07","08","09","10","11","12","13"};
-			String H[] = {"01","02","03","04","05","06","07","08","09","10","11","12","13"};
-			String C[] = {"01","02","03","04","05","06","07","08","09","10","11","12","13"};
+
 			String card = sc.next();
-			int NS = 13;
-			int ND = 13;
-			int NH = 13;
-			int NC = 13;
-			boolean flag = true;
-			for(int i = 0; i < 4; i++) {
-				char p = card.charAt(i*3);
-				String num = card.substring((i*3)+1,(i*3)+2);
-				System.out.println(num);
-				if(p =='S') {
-					
-				
-					for(int j = 0; j < 12; j++) {
-						if (S[j].equals(num)) {
-							S[j] ="";
-							NS--;
-						}
-						else if(S[j].equals("")) {
-							flag = false;
-							break;
-						}
-					}
-					
-				}
-				else if(p =='D') {
-					for(int j = 0; j < 12; j++) {
-						if (D[j].equals(num)) {
-							D[j] ="";
-							ND--;
-						}
-						else if(D[j].equals("")) {
-							flag = false;
-							break;
-						}
-					}
-				}
-				else if(p =='H') {
-					for(int j = 0; j < 12; j++) {
-						if (H[j].equals(num)) {
-							H[j] ="";
-							NH--;
-						}
-						else if(H[j].equals("")) {
-							flag = false;
-							break;
-						}
-					}
-				}				
-				
-				else if(p =='C') {
-					for(int j = 0; j < 12; j++) {
-						if (C[j].equals(num)) {
-							C[j] ="";
-							NC--;
-						}
-						else if(C[j].equals("")) {
-							flag = false;
-							break;
-						}
-					}
-				}				
-				
-			}
+			String deck[] ={"01","02","03","04","05","06","07","08","09","10","11","12","13"};
+			int S[] = new int [13];
+			int D[] = new int [13];
+			int H[] = new int [13];
+			int C[] = new int [13];
 			
-			if(flag) {
-				System.out.println("#"+TC+" "+NS+" "+ND+" "+NH+" "+NC);
-			}else {
-				System.out.println("#"+TC+" "+"ERROR");
+			int count_S = 0;
+			int count_D = 0;
+			int count_H = 0;
+			int count_C = 0;
+			boolean flag = true;
+			for(int i = 0; i < card.length()/3; i++) {
+				
+				char deck_T = card.charAt(i*3);
+				String deck_XY  = card.substring((i*3+1), (i*3)+3);
+				
+				for(int j = 0; j < 13; j++) {
+					
+					if (deck_T== 'S') {
+						if(deck[j].equals(deck_XY)) {
+							S[j]++;
+							count_S++;
+						}
+					}
+					
+					else if (deck_T== 'D') {
+						if(deck[j].equals(deck_XY)) {
+							D[j]++;
+							count_D++;
+						}
+					}
+					
+					else if (deck_T== 'H') {
+						if(deck[j].equals(deck_XY)) {
+							H[j]++;
+							count_H++;
+						}
+					}
+					
+					else if (deck_T== 'C') {
+						if(deck[j].equals(deck_XY)) {
+							C[j]++;
+							count_C++;
+						}
+					}
+					
+					if (S[j] > 1 || D[j] > 1|| H[j] > 1|| C[j] > 1) {
+						flag = false;
+						break;
+					}
+				}
+				
 			}
+			 count_S = 13 - count_S;
+			 count_D = 13 - count_D;
+			 count_H = 13 - count_H;
+			 count_C = 13 - count_C;
+			 
+			if(flag)System.out.println( "#"+TC+" "+count_S +" "+count_D +" "+count_H +" "+count_C);
+				
+			else System.out.println( "#"+TC+" "+"ERROR");
 			
 			
 		}
