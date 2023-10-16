@@ -25,6 +25,7 @@ public class swea_2805 {
 				}
 			}
 			
+			
 			// 상단 삼각형;
 			for(int i = 0; i < N/2;i++) {
 				for(int j = N/2-i; j<= (N/2+i) ; j++) {
