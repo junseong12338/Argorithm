@@ -2,79 +2,47 @@
 package sweaD2;
 
 import java.util.Scanner;
-import java.io.FileInputStream;
 public class swea_1954 {
 
 	public static void main(String[] args) {
 		
-		// [?]´ŞÆØÀÌ ¾Ë°í¸®Áò *****
+		// [?] 1954. ë‹¬íŒ½ì´ ìˆ«ì
 		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
 		T=sc.nextInt();
-		int N = 0;
 		
-		for(int Test = 1 ; Test<= T; Test++) {
-			int i , j = 0;
+		for(int TC = 1 ; TC<= T; TC++) {
+			int N = sc.nextInt();
+			int arr[][] =new int[N][N];
+			int snail = N-1;
+		
 			int num = 1;
-			N = sc.nextInt();
-			System.out.println("#" + Test);
-			
-			int[][] snail = new int [N][N];
+			// ì¢Œ
+			for(int i = 0; i < N; i++) arr[0][i] +=num++;
 
-			for( i = 0; i <N; i++) {
-				for( j = 0; j< N; j++ ) {
-					snail[i][j]= 0; 
-					
-				}
+			for(int i = 0; i < N; i++) {
+				// ì¢Œì¸¡
+				for(int j = 0; j < N; j++) if(arr[i][j] == 0) arr[i][j] +=num++;
+
+				// ì•„ë˜
+				for(int j = 0; j < N; j++) if(arr[j][snail-i] == 0) arr[j][snail-i] +=num++;
+
+				// ìš°ì¸¡
+				for(int j = N-1; j >=0 ; j--) if(arr[snail-i][j] == 0) arr[snail-i][j] +=num++;
+
+				// ìœ„
+				for(int j = N-1; j >=0 ; j--) if(arr[j][i] == 0) arr[j][i] +=num++;
+
 			}
 			
-		  	i = 0;
-		    j = 0;
-		    snail[i][j] = 1;
-		    num = 2;
-			
-			while (num <= N*N) {
-			
-				// Right µé¾î°¡´Â °ø½Ä
-				while(j+1<N && snail[i][j + 1] == 0) {
-					   j++;
-					   snail[i][j] = num;
-			            num++;
-				}
-				
-				// Down µé¾î°¡´Â °ø½Ä
-				while(i+1<N && snail[i + 1][j] == 0) {
-					   i++;
-					   snail[i][j] = num;
-			           num++;
-			           
-				}
-				
-				// Left µé¾î°¡´Â °ø½Ä
-				while( j-1 >= 0 && snail[i][j - 1] == 0) {
-					   j--;
-					   snail[i][j] = num;
-			            num++;
-				}
-				
-			
-				// up°ø½Ä
-				while( i-1 >= 0 && snail[i - 1][j] == 0) {
-					   i--;
-					   snail[i][j] = num;
-			            num++;
-				}
-				
-			
-			}
-			for( i = 0; i < N; i++) {
-				for( j = 0; j< N; j++ ) {
-					System.out.print(snail[i][j]+" ");
+			System.out.println("#"+TC);
+			for(int i = 0; i < N; i++) {
+				for(int j = 0; j < N; j++) {
+					System.out.print(arr[i][j]+" ");
 				}
 				System.out.println();
 			}
-
 		}
 		
 	
