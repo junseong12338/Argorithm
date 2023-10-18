@@ -2,38 +2,46 @@
 package sweaD2;
 
 import java.util.Scanner;
-import java.io.FileInputStream;
+
 public class swea_1859 {
 
 	public static void main(String[] args) {
 		
-		//[?] ¹é¸¸ ÀåÀÚ ÇÁ·ÎÁ§Æ®
+		// [?] 1859. ë°±ë§Œ ì¥ì í”„ë¡œì íŠ¸
 		
 		Scanner sc = new Scanner(System.in);
 		int T = 0;
-
 		T=sc.nextInt();
 		
 		
 		for(int TC = 1 ; TC<= T; TC++) {
+			int N = sc.nextInt();
+			long day [] = new long [N];
+			long max = Integer.MIN_VALUE;
 			
-			int day = 0;
-			day = sc.nextInt();
 			long money = 0;
-			int Max = Integer.MIN_VALUE;
-			int [] Case = new int[day];
-		
-			for(int i = 0; i<day; i++) {
-				Case[i] = sc.nextInt();
+
+			for(int i = 0; i < N; i++) {
+				day[i] = sc.nextInt();
 			}
 			
-		    for (int j = day-1; j>=0;j--) {
-		    	if(Max < Case[j] ){
-		    		Max = Case[j];
-				}
-				money +=  Max - Case[j];
+			for(int i = N-1; i>=0; i--) {
+				
+				if(max < day[i]) {
+					max = day[i];
+				} 
+				
+				money += max-day[i];
+
+				
 			}
-		    System.out.println("#"+ TC+" "+ money);
+			
+			System.out.println("#"+TC+" "+money);
+			
+			
 		}
+		
+	
 	}
+
 }
