@@ -1,61 +1,72 @@
 
 package sweaD2;
 
+import java.util.Arrays;
 import java.util.Scanner;
-import java.io.FileInputStream;
 public class swea_1974 {
 
 	public static void main(String[] args) {
 		
-		// [?] ½ºµµÄí °ËÁõ **** ¹éÆ®·¹Å·
+		// [?] 1974. ìŠ¤ë„ì¿  ê²€ì¦
 		
 		Scanner sc = new Scanner(System.in);
-		int T = sc.nextInt();
-		int[][] board = new int[9][9];
-		for (int tc = 1; tc <= T; tc++) {
-			int ans = 1;
-			for (int i = 0; i < 9; i++)
-				for (int j = 0; j < 9; j++)
-					board[i][j] = sc.nextInt();
+		int T =sc.nextInt();
+	
+		
+		for(int TC = 1 ; TC<= T; TC++) {
+			boolean flag = true;
+			int N = 9;
+			int check[] = new int [9];
+			int map [][] = new int [N][N];
+			int num = 0;
+			for(int i = 0; i < N; i++) {
+				for(int j = 0; j < N; j++) {
+					map[i][j] = sc.nextInt();
+				}
+			}
+		
+			for(int i = 0; i < N; i++) {
+				if(flag) {
+					// ê°€ë¡œì¤„ í™•ì¸
+					for(int j = 0; j < N; j++) check[j] = map[i][j]; 
+					Arrays.sort(check);
+					for(int j = 1; j <= 9; j++) if(check[j-1] != j) flag = false;
+					
+					// ì„¸ë¡œì¤„ í™•ì¸
+					for(int j = 0; j < N; j++) check[j] = map[j][i]; 
+					Arrays.sort(check);
+					for(int j = 1; j <= 9; j++) if(check[j-1] != j) flag = false;
+				}
+				else break;
+			}
 			
-			// row, col °Ë»ç
+			// ì‘ì€ ê²©ì
+			if(flag) {
+				for(int l = 0 ; l < 3; l++) {
+					if(flag) {
+						for(int k = 0; k < 3; k++) {
+							for(int i = l*3; i < (l*3)+3; i++) {
+								for(int j = k*3; j < (k*3)+3; j++) {
+									check[num] = map [i][j];
+									num++;
+								}
+							}
+							Arrays.sort(check);
+							for(int j = 1; j <= 9; j++) if(check[j-1] != j) flag = false;
+							num = 0;
+						}
+					} else break;
 
-			for (int i = 0; i < 9; i++) {
-				int rsum = 0;
-				int csum = 0;
-				for (int j = 0; j < 9; j++) {
-					rsum += board[i][j];
-					csum += board[j][i];
-				}
-				if (rsum != 45 || csum != 45) {
-					ans = 0;
-					break;
 				}
 			}
-			// À¯È¿ÇÏÁö ¾ÊÀº °æ¿ì °Ë»ç stop
 
-			if (ans == 0) {
-				System.out.println("#" + tc + " 0");
-				continue;
-			}
 
-			// Á¤»ç°¢Çü ±¸¿ª °Ë»ç
-
-			for (int i = 0; i < 9; i+=3) {
-				for (int j = 0; j < 9; j+=3) {
-					int sum = 0;
-					for (int x = 0; x < 3; x++)
-						for (int y = 0; y < 3; y++)
-							sum += board[i+x][j+y];
-					if (sum != 45) {
-						ans = 0;
-						break;
-					}
-				}
-				if (ans == 0) break;					
-			}
-			System.out.println("#" + tc + " " + ans);
+			
+			if(flag) System.out.println("#"+TC+" "+1);
+			else System.out.println("#"+TC+" "+0);
 		}
-		sc.close();
+		
+	
 	}
+
 }
