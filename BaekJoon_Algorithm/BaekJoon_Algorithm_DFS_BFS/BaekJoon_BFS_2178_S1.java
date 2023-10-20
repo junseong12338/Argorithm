@@ -8,7 +8,7 @@ public class BaekJoon_BFS_2178_S1 {
 	static int [] dy = {0,0,-1,1}; // 상하좌우
 	static boolean [][] visited;
 	static int map[][];
-	static int n,m,count;
+	static int n,m;
 	public static void main(String[] args) {
 		
 		// [?] 미로탐색  S1
@@ -16,7 +16,7 @@ public class BaekJoon_BFS_2178_S1 {
 		
 		n = sc.nextInt();
 		m = sc.nextInt();
-		count = 0;
+
 		
 		map = new int[n][m];
 		visited = new boolean[n][m];
@@ -46,42 +46,7 @@ public class BaekJoon_BFS_2178_S1 {
 					queue.add(new int[] {x,y});
 					}
 				}
-			
 			}
-			
-			
 		}
-		
 	}
-/*	private static void BFS(int i, int j) {
-		
-		Queue<Integer> qx = new LinkedList<>();
-		Queue<Integer> qy = new LinkedList<>();
-		qx.offer(i);
-		qy.offer(j);
-		
-		while(!qx.isEmpty() && !qy.isEmpty()) {
-			int nx = qx.poll();
-			int ny = qy.poll();
-			visited[i][j] = true;
-			for(int k=0; k<4; k++) { // 상하좌우로 탐색
-				int x = nx+dx[k];
-				int y = ny+dy[k];
-				if(x >= 0 && y>=0 && x < n && y < m) {
-					if(map[x][y] !=0 && !visited[x][y]) {
-					visited[x][y] = true;
-					map[x][y] = map[nx][ny] + 1 ; //핵심
-					qx.add(x);
-					qy.add(y);
-					}
-				}
-			
-			}
-			
-			
-		}
-		
-	}
-*/
-
 }
