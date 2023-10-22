@@ -15,7 +15,7 @@ public class BaekJoon_DFS_2468_S1 {
 	// Main
 	public static void main(String[] args) {
 		
-		// [?] 안전 영역
+		// [?] 안전 영역 S1
 		Scanner sc = new Scanner(System.in);	
 		int count = 0;
 		area = 0;

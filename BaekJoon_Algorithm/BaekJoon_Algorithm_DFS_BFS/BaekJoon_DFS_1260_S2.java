@@ -7,7 +7,7 @@ public class BaekJoon_DFS_1260_S2 {
 	static boolean[] visited;
 	static ArrayList<Integer>[] A ;
 	public static void main(String[] args) {
-		// [?] DFS와 BFS 프로그램 S2
+		// [?] DFS와 BFS 프로그램 S2 -- 2
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		int M = sc.nextInt();

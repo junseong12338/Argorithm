@@ -9,7 +9,7 @@ public class BaekJoon_DFS_2606_S3 {
 	static int count = 0;
 	public static void main(String[] args)  throws IOException{
 		
-		// [?] 2606 바이러스 S3
+		// [?] 2606 바이러스 S3 -- 2
 		Scanner sc = new Scanner(System.in);
 		
 		int n = sc.nextInt();

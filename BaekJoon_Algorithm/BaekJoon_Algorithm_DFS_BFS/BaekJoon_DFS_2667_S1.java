@@ -11,7 +11,7 @@ public class BaekJoon_DFS_2667_S1 {
 	static int dx[] = {-1,1,0,0};
 	static int dy[] = {0,0,1,-1};
 	public static void main(String[] args) {
-		// [?] 단지번호붙이기 S1
+		// [?] 단지번호붙이기 S1 -- 3
 		Scanner sc = new Scanner(System.in);
 		n = sc.nextInt();
 		map = new int[n][n];
