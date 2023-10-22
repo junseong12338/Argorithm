@@ -6,9 +6,6 @@ import java.lang.reflect.Array;
 
 
 public class BaekJoon_DFS_ {
-
-	
-	static ArrayList<Integer> Map[];
 	
 	// Main
 	public static void main(String[] args) {
