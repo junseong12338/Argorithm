@@ -12,74 +12,80 @@ public class Simulation_Implementation_03 {
 		int dx [] = {-1,0,1,0};
 		int dy [] = {0,1,0,-1};	
 		int n = board.length;
-	
-		int hx = 0, hy = 0, h = 0, count = 0;
-		int gx = 0, gy = 0, g = 0;
-		for(int i = 0; i < board.length; i++ ) {
-			for(int j = 0; j < board[i].length; j++ ) {
-				
-				
+		int x1 = 0, y1 = 0;
+		int x2 = 0, y2 = 0;
+		int count = 0;
+		int d1 = 0;
+		int d2 = 0;
+		
+		for(int i = 0; i < 10; i++ ) {
+			for(int j = 0; j < 10; j++ ) {
 				if(board[i][j] == 2) {
-					hx = i;
-					hy = j;
+					x1 = i;
+					y1 = j;
 				}
-				
 				if(board[i][j] == 3) {
-					gx = i;
-					gy = j;
+					x2 = i;
+					y2 = j;
 				}
 			
 			}
 			
 		}
 		
-		while(count < 6) {
+		while(count < 10000) {
 			count++;
-			int nx = hx + dx[h];
-			int ny = hy + dy[h];
-			board[hx][hy] = 0;
+			int nx1 = x1 + dx[d1];
+			int ny1 = y1 + dy[d1];
 			
-			int ngx = gx + dx[g];
-			int ngy = gy + dy[g];
-			 board[gx][gy] = 0;
-			 
-			 
-			 
-			if(nx < 0 || nx >= n || ny < 0 || ny >= n || board[nx][ny] == 1){
-				h = (h + 1) % 4;
-				continue;
+			int nx2 = x2 + dx[d2];
+			int ny2 = y2 + dy[d2];
+			
+//			boolean flag1 = true, flag2 = true;
+//			if(nx1 < 0 || nx1 >= n || ny1 < 0 || ny1 >= n || board[nx1][ny1] == 1){
+//				d1 = (d1 + 1) % 4;
+//				flag1 = false;
+//			}
+//			if(nx2 < 0 || nx2 >= n || ny2 < 0 || ny2 >= n || board[nx2][ny2] == 1){
+//				d2 = (d2 + 1) % 4;
+//				flag2 = false;
+//			}
+//			if(flag1 == true){
+//				x1 = nx1;
+//				y1 = ny1;
+//			}
+//			if(flag2 == true){
+//				x2 = nx2;
+//				y2 = ny2;
+//			}
+//			if(x1 == x2 && y1 == y2) break;
+			
+			
+			// 현수 이동 
+			if(nx1 < 0 || nx1 >= n || ny1 < 0 || ny1 >= n || board[nx1][ny1] == 1) d1 = (d1 + 1) % 4;
+			// 벽에 닿거나 나무를 만나지 않으면 현수의 위치변수 변경
+			else if(board[nx1][ny1] == 0){
+				board[x1][y1] = 0;
+				x1 = nx1;
+				y1 = ny1;		
+				board[x1][y1] = 2;
 			}
-			
-			if(ngx < 0 || ngx >= n || ngy < 0 || ngy >= n || board[ngx][ngy] == 1){
-				g = (g + 1) % 4;
-				continue;
+		
+			// 강아지 이동
+			if(nx2 < 0 || nx2 >= n || ny2 < 0 || ny2 >= n || board[nx2][ny2] == 1) d2 = (d2 + 1) % 4;
+			else if(board[nx2][ny2] == 0){
+				
+				board[x2][y2] = 0;
+				x2 = nx2;
+				y2 = ny2;		
+				board[x2][y2] = 3;
 			}
-			
-			
-			 board[nx][ny] = 2;
-			 board[ngx][ngy] = 3;
-			 
-			hx = nx;
-			hy = ny;			
-			
-			gx = ngx;
-			gy = ngy;
-			
-			for(int i = 0; i < board.length; i++ ) {
-				for(int j = 0; j < board[i].length; j++ ) {
-					System.out.print(board[i][j]+" ");
-				}
-				System.out.println();
-			}
-			System.out.println();
-			
-			
-			
-			
+			// 강아지가 현수를 만나면 종료
+			else if(board[nx2][ny2] == 2) break;
+
 		}
-		
-		
-		return answer;		
+		if(count >= 10000) return 0;
+		return count;
 	}
 
 	public static void main(String[] args){
@@ -95,16 +101,16 @@ public class Simulation_Implementation_03 {
 			{0, 0, 0, 1, 0, 1, 0, 0, 0, 0}, 
 			{0, 1, 0, 1, 0, 0, 0, 0, 0, 0}}; 
 		System.out.println(solution(arr1));
-//		int[][] arr2 = {{1, 0, 0, 0, 1, 0, 0, 0, 0, 0}, 
-//			{0, 0, 0, 0, 0, 0, 1, 0, 0, 0}, 
-//			{0, 0, 1, 1, 0, 0, 0, 1, 0, 0}, 
-//			{0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, 
-//			{0, 0, 0, 1, 0, 1, 0, 0, 0, 0}, 
-//			{1, 0, 0, 0, 0, 0, 1, 0, 1, 0}, 
-//			{0, 0, 0, 1, 0, 0, 0, 0, 0, 0}, 
-//			{0, 0, 1, 0, 0, 0, 0, 0, 2, 1}, 
-//			{0, 0, 0, 1, 0, 1, 0, 0, 0, 1}, 
-//			{0, 1, 0, 1, 0, 0, 0, 0, 0, 3}}; 
-//		System.out.println(solution(arr2));
+		int[][] arr2 = {{1, 0, 0, 0, 1, 0, 0, 0, 0, 0}, 
+			{0, 0, 0, 0, 0, 0, 1, 0, 0, 0}, 
+			{0, 0, 1, 1, 0, 0, 0, 1, 0, 0}, 
+			{0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, 
+			{0, 0, 0, 1, 0, 1, 0, 0, 0, 0}, 
+			{1, 0, 0, 0, 0, 0, 1, 0, 1, 0}, 
+			{0, 0, 0, 1, 0, 0, 0, 0, 0, 0}, 
+			{0, 0, 1, 0, 0, 0, 0, 0, 2, 1}, 
+			{0, 0, 0, 1, 0, 1, 0, 0, 0, 1}, 
+			{0, 1, 0, 1, 0, 0, 0, 0, 0, 3}}; 
+		System.out.println(solution(arr2));
 	}
 }
