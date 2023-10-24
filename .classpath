@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="BaekJoon_Algorithm"/>
-	<classpathentry kind="src" path="Inflean_Algorithm"/>
+	<classpathentry kind="src" path="Inflean_Algorithm_1"/>
+	<classpathentry kind="src" path="Inflean_Algorithm_2"/>
 	<classpathentry kind="src" path="swea"/>
-	<classpathentry kind="src" path="Inflean_Algorithm2"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

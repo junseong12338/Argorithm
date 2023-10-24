@@ -3,7 +3,7 @@ package sweaD1;
 
 import java.util.Scanner;
 import java.io.FileInputStream;
-public class swea_ {
+public class swea_{
 
 	public static void main(String[] args) {
 		
