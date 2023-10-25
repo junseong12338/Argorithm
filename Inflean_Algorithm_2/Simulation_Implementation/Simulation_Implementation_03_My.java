@@ -2,8 +2,8 @@ package Simulation_Implementation;
 
 import java.util.*;
 
-//Main
-public class Simulation_Implementation_03 {
+//Main 이것도 맞긴함 
+public class Simulation_Implementation_03_My {
 	
 	public static int solution(int[][] board){
 		int answer = 0;
@@ -40,27 +40,7 @@ public class Simulation_Implementation_03 {
 			
 			int nx2 = x2 + dx[d2];
 			int ny2 = y2 + dy[d2];
-			
-//			boolean flag1 = true, flag2 = true;
-//			if(nx1 < 0 || nx1 >= n || ny1 < 0 || ny1 >= n || board[nx1][ny1] == 1){
-//				d1 = (d1 + 1) % 4;
-//				flag1 = false;
-//			}
-//			if(nx2 < 0 || nx2 >= n || ny2 < 0 || ny2 >= n || board[nx2][ny2] == 1){
-//				d2 = (d2 + 1) % 4;
-//				flag2 = false;
-//			}
-//			if(flag1 == true){
-//				x1 = nx1;
-//				y1 = ny1;
-//			}
-//			if(flag2 == true){
-//				x2 = nx2;
-//				y2 = ny2;
-//			}
-//			if(x1 == x2 && y1 == y2) break;
-			
-			
+
 			// 현수 이동 
 			if(nx1 < 0 || nx1 >= n || ny1 < 0 || ny1 >= n || board[nx1][ny1] == 1) d1 = (d1 + 1) % 4;
 			// 벽에 닿거나 나무를 만나지 않으면 현수의 위치변수 변경
