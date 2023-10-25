@@ -2,7 +2,8 @@ package Simulation_Implementation;
 
 import java.util.*;
 
-//Main
+//Main 좌석 번호
+
 public class Simulation_Implementation_04 {
 								 
 	public static int[] solution(int c, int r, int k){
@@ -13,10 +14,15 @@ public class Simulation_Implementation_04 {
 		int[][] seat = new int[c][r];
 		int[] dx = {-1, 0, 1, 0};
 		int[] dy = {0, 1, 0, -1};
+		
+		
+
 		int x = 0, y = 0, count = 1, d = 1;
+		
 		while(count < k){
 			int nx = x + dx[d];
 			int ny = y + dy[d];
+		
 			if(nx < 0 || nx >= c || ny < 0 || ny >=r || seat[nx][ny] != 0){
 				d = (d + 1) % 4;
 				continue;
