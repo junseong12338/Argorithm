@@ -2,7 +2,7 @@ package Hashing_Parsing;
 
 import java.util.*;
 
-//Main
+//Main 한 번만 사용한 최초문자
 public class Hashing_Parsing_01_Answer {
 	
 	public static int solution(String s){

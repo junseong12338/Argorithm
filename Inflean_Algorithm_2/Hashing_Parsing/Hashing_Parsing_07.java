@@ -1,12 +1,50 @@
 package Hashing_Parsing;
 
-import java.util.*;
+import java.util.*;import javax.imageio.plugins.tiff.GeoTIFFTagSet;
 
-//Main
+//Main 경고 메일
 public class Hashing_Parsing_07 {
 	
+	
+	public static int getTime(String time) {
+		
+		int H = Integer.parseInt(time.split(":")[0]);
+		int M = Integer.parseInt(time.split(":")[1]);
+		
+		return H*60+M;
+	}
+	
 	public static String[] solution(String[] reports, int time){
-		String[] answer = {};
+		
+		
+		HashMap<String, Integer> inT = new HashMap<String, Integer>();
+		HashMap<String, Integer> sumT = new HashMap<String, Integer>();
+		
+		
+		for(String x : reports) {
+			String a = x.split(" ")[0]; // 이름 
+			String b = x.split(" ")[1]; // HH MM 시간
+			String c = x.split(" ")[2]; // in out
+			
+			// a 라는 사람이 보안실에 입장 한 경우 들어온 시간을 분단위로 변환
+			if(c.equals("in")) inT.put(a, getTime(b)); 
+			// out 이라면 a라는 사람의 b라는 시간에 나갔다. 나간시간 - 들어온 시간 
+			// 이용 시간 : getOrDefault사용해서 누적해서 값을 더해줌 
+			else sumT.put(a, sumT.getOrDefault(a, 0) + (getTime(b) - inT.get(a)));
+		}
+		// 정렬해서 출력하기 위해서 ArrayList만듦
+		ArrayList<String> res = new ArrayList<String>();
+		for(String name : sumT.keySet()) {
+			// 보안실을 이용한 총 시간을 초과했다면 그직원의 이름 추가 res.add
+			if(sumT.get(name) > time) res.add(name);
+		}
+		// 이름을 사전순으로 정렬 
+		res.sort((a,b) -> a.compareTo(b));
+		String[] answer = new String[res.size()];
+		
+		for(int i = 0; i < res.size(); i++) {
+			answer[i] = res.get(i);
+		}
 		
 		return answer;
 	}

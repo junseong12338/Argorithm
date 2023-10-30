@@ -2,7 +2,7 @@ package Simulation_Implementation;
 
 import java.util.*;
 
-//Main
+//Main 회의실 만남
 public class Simulation_Implementation_08 {
 	
 	public static int[] solution(int[] enter, int[] exit){

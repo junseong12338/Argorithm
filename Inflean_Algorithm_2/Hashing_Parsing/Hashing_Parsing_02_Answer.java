@@ -2,7 +2,7 @@ package Hashing_Parsing;
 
 import java.util.*;
 
-//Main
+//Main 같은 빈도수 만들기
 public class Hashing_Parsing_02_Answer {
 	
 	public static int[] solution(String s){

@@ -3,7 +3,7 @@ package Hashing_Parsing;
 import java.util.*;
 import java.util.Map.Entry;
 
-//Main
+//Main 서로 다른 빈도수 만들기
 public class Hashing_Parsing_03 {
 	
 	public static int solution(String s){
