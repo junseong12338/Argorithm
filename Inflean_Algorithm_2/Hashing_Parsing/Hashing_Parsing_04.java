@@ -2,7 +2,7 @@ package Hashing_Parsing;
 
 import java.util.*;
 
-//Main
+//Main 음수가 있는 부분수열
 public class Hashing_Parsing_04 {
 	
 	public static int solution(int[] nums , int m){
