@@ -5,7 +5,10 @@ import java.util.*;
 //Main 피부과
 public class Data_Structure_04 {
 	
+	
+	
 	public static int solution(int[] laser, String[] enter){
+		
 		int answer = 0;
 		
 		return answer;
