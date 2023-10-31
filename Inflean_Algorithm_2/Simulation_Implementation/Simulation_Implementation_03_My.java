@@ -2,7 +2,7 @@ package Simulation_Implementation;
 
 import java.util.*;
 
-//Main 이것도 맞긴함 
+//Main 이것도 맞긴함 잃어버린 강아지
 public class Simulation_Implementation_03_My {
 	
 	public static int solution(int[][] board){
