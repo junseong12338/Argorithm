@@ -4,12 +4,42 @@ import java.util.*;
 
 //Main 피부과
 public class Data_Structure_04 {
-	
+	public static int getTime(String time) {
+		int H = Integer.parseInt(time.split(":")[0]);
+		int M = Integer.parseInt(time.split(":")[1]);
+		
+		return H*60+M;
+	}
 	
 	
 	public static int solution(int[] laser, String[] enter){
 		
 		int answer = 0;
+		int n = enter.length;
+		int [][] inList = new int[n][2];
+		for(int i = 0; i < n; i++) {
+			int a = getTime(enter[i].split(" ")[0]);
+			int b = Integer.parseInt(enter[i].split(" ")[1]);
+			inList[i][0] = a;
+			inList[i][1] = b;
+		}
+		Queue<Integer> Q = new LinkedList<Integer>();
+		Q.offer(inList[0][1]);
+		int fT= inList[0][0];
+		int pos = 1;
+		
+		for(int t = fT; t <= 1200; t++) {
+			if(pos < n && t == inList[pos][0]) {
+				if(Q.isEmpty() && inList[pos][0] > fT) fT = inList[pos][0];
+				Q.offer(inList[pos][1]);
+				pos++;
+			}
+			if(t == fT && !Q.isEmpty()) {
+				int idx = Q.poll();
+				fT+= laser[idx];
+			}
+			answer = Math.max(answer,Q.size());
+		}
 		
 		return answer;
 	}
