@@ -33,7 +33,6 @@ public class Data_Structure_05 {
 			// 작업이 끝나는시간
 			fT = fT+ex[0];
 			// 작업 번호를 차례차례 List에 저장
-			// 10만
 			answer[idx++] =ex[1];
 			
 		}
