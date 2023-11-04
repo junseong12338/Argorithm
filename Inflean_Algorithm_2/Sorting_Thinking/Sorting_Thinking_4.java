@@ -5,9 +5,26 @@ import java.util.*;
 // 심사위원
 public class Sorting_Thinking_4 {
 	public static int solution(int[] score, int k){
+		
+		Arrays.sort(score);
+		int n = score.length;
 		int answer = 0;
-
-		return answer;
+		int lt = 0;
+		int rt = k-1;
+		
+		while(true) {
+			
+			if(score[rt] - score[lt] <= 10) break;
+			
+			lt++;
+			rt++;	
+			
+		}
+		
+		for(int i = lt; i < rt+1; i++) answer += score[i];
+		
+		
+		return answer / k;
 	}
 
 	public static void main(String[] args){
