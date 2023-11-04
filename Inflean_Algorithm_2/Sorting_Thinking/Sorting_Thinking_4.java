@@ -1,6 +1,6 @@
 package Sorting_Thinking;
 
-import java.util.Arrays;
+import java.util.*;
 
 // 심사위원
 public class Sorting_Thinking_4 {

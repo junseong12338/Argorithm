@@ -1,6 +1,6 @@
 package Sorting_Thinking;
 
-import java.util.Arrays;
+import java.util.*;
 
 // 카드가져가기
 public class Sorting_Thinking_3 {

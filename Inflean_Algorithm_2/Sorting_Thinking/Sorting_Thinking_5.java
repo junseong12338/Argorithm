@@ -1,6 +1,6 @@
 package Sorting_Thinking;
 
-import java.util.Arrays;
+import java.util.*;
 
 // 모임장소
 public class Sorting_Thinking_5 {

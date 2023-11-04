@@ -1,12 +1,29 @@
 package Sorting_Thinking;
 
 import java.util.Arrays;
+import java.util.HashMap; 
 
 // 수열 찾기
 public class Sorting_Thinking_2 {
 	public static int[] solution(int[] nums){
 		int[] answer = new int[nums.length / 2];
+		HashMap<Integer,Integer> sh = new HashMap<Integer, Integer>();
+		
+		for(int x : nums)sh.put(x, sh.getOrDefault(x,0)+1);
+		Arrays.sort(nums);
 	
+	
+		int i = 0;
+		for(int x : nums) {
+			if(sh.get(x) == 0) continue;
+			answer[i] = x;
+			i++;
+			sh.put(x, sh.get(x)-1);
+			sh.put(x*2,sh.get(x*2)-1);
+		}
+		
+		
+		
 		return answer;
 	}
 
