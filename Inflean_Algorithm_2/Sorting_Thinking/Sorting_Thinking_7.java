@@ -5,9 +5,31 @@ import java.util.*;
 // 최소 회의실 개수
 public class Sorting_Thinking_7{
 	public static int solution(int[][] meetings){
+		ArrayList<int[]> list = new ArrayList<>();
 		int answer = 0;
+		int cnt = 0;
+		
 	
-        	return answer;
+
+		for(int[] x : meetings) {
+			// 시작 시간 : 1 끝나는 시간 : 2 
+			list.add(new int [] {x[0],1});
+			list.add(new int [] {x[1],2});
+		}
+		// 1. a[0] - b[0]  : 시간에 의해서 오름 차순 정렬을 하되 
+		// 2. a[0] == b[0] : 어떤 회의의 끝나는 시간과 끝나는 시간이 같다면
+		// 3. b[1] - a[1]  : 끝나는 시간이 앞에 오게끔 내림 차순 정렬을 해라
+		
+		list.sort((a,b) -> a[0] == b[0]? b[1] - a[1] : a[0] - b[0] );
+		
+		
+		for(int[] x : list) {
+			if(x[1] == 1) cnt++;
+			else cnt --;
+			answer = Math.max(answer, cnt);
+		}
+		
+        return answer;
 	}
 
 	public static void main(String[] args){
