@@ -18,12 +18,10 @@ public class Greedy_4 {
 		
 		int s = 0, e = 0 ,answer = 0;
 		for(int i = 0; i < n; i++) {
-			
 		
 			e =  s + list[i][1] + list[i][0];
 			s += list[i][0];
-
-			if (e > answer) answer = e;
+			answer = Math.max(answer, e);
 			
 		}
 		
