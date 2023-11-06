@@ -6,7 +6,29 @@ import java.util.*;
 public class Greedy_4 {
 
 	public static int solution(int[] plantTime, int[] growTime){
-		int answer = 0;
+		int n = plantTime.length;
+		int list[][] =new int [n][2];
+		
+		for(int i = 0; i < n; i++) {
+			list[i][0] = plantTime[i];
+			list[i][1] = growTime[i];
+		}
+		
+		Arrays.sort(list, (a,b) -> b[1] - a[1]);
+		
+		int s = 0, e = 0 ,answer = 0;
+		for(int i = 0; i < n; i++) {
+			
+		
+			e =  s + list[i][1] + list[i][0];
+			s += list[i][0];
+
+			if (e > answer) answer = e;
+			
+		}
+		
+		
+		
 		
 		return answer;
 	}
