@@ -6,7 +6,7 @@ public class BaekJoon_Stack_1874_S3 {
 	// Main
 	public static void main(String[] args) {
 		
-		// [?] 스택 수열 
+		// [?] 스택 수열 S3
 		Scanner sc = new Scanner(System.in);
 		
 		

@@ -1,4 +1,4 @@
-package BaekJoon_Algorithm_Data_Structure;
+package BaekJoon_Algorithm_Queue;
 
 import java.util.*;
 
