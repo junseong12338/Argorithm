@@ -3,7 +3,6 @@ package Greedy;
 import java.util.*;
 
 // 5. 전투 게임
-
 class Info implements Comparable<Info>{
 	public int idx ;
 	public Character team;
@@ -40,7 +39,7 @@ public class Greedy_5 {
 		Collections.sort(list);
 		HashMap<Character, Integer>Tp = new HashMap<Character, Integer>();
 		int j = 0, total = 0;
-		for(int i =1; i < n; i++) {
+		for(int i = 1; i < n; i++) {
 			for(; j < n; j++) {
 				if(list.get(j).power < list.get(i).power) {
 					total+= list.get(j).power;
