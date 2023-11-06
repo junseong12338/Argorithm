@@ -6,7 +6,25 @@ import java.util.*;
 public class Greedy_1 {
 	
 	public static int  solution(int[] nums, int m){
+		Arrays.sort(nums);
+		
+		int lt = 0;
+		int rt = nums.length-1;
 		int answer = 0;
+		
+		
+		while(lt <= rt) {
+			
+			if(nums[lt] + nums[rt] > m) {
+				answer++;
+				rt --;
+			}else {
+				rt--;
+				lt++;
+				answer++;
+			}
+			
+		}
 		
 		return answer;
 	}
