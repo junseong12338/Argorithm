@@ -7,6 +7,34 @@ public class Greedy_6 {
 	
 	public static int solution(int n, int[][] trans, int[][] bookings){
 		int answer=0;	
+		int [] sum = new int [n+1];
+		for(int [] x : trans) {
+			sum[x[0]] += x[2];
+			sum[x[1]] += x[2];
+		}
+		
+		for(int i = 1 ; i <=n; i++) sum[i] += sum[i-1];
+		
+		int bN = bookings.length;
+		Arrays.sort(bookings, (a , b) -> a[0] - b[0]);
+		LinkedList<Integer> nums = new LinkedList<Integer>();
+		int ix = 0;
+		for(int i = 1; i <= n; i++) {
+			while(!nums.isEmpty() && nums.peek() == i) {
+				answer ++;
+				nums.pollFirst();
+			}
+			while(ix < bN && bookings[ix][0] == i) {
+				nums.add(bookings[ix][1]);
+				ix++;
+			}
+			Collections.sort(nums);
+			while(nums.size() > sum[i]) {
+				nums.pollLast();
+			}
+			
+		}
+		
 		
 		return answer;
 	}
