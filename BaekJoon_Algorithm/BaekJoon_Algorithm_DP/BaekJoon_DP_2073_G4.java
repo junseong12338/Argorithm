@@ -5,7 +5,7 @@ import java.io.*;
 public class BaekJoon_DP_2073_G4 {
 	// Main
 	public static void main(String[] args) {
-		// [?] 수도 배관 공사
+		// [?] 수도 배관 공사 G4
 		Scanner sc = new Scanner(System.in);
 	
 		int D = sc.nextInt();
