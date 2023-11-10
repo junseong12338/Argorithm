@@ -39,7 +39,6 @@ public class DFS_1 {
 		}else {
 			for(int i = 0; i < m; i++) {
 				if(ch[i] == 0) {
-					
 					ch[i] = 1;
 					DFS(L+1,number * 10 +nums[i]);
 					ch[i] = 0;
@@ -51,7 +50,10 @@ public class DFS_1 {
 
 	public static void main(String[] args){
 		
-		System.out.println(solution(123));
-		
+//		System.out.println(solution(123));
+//		System.out.println(solution(321));
+		System.out.println(solution(20573));
+//		System.out.println(solution(27711));
+//		System.out.println(solution(54312));
 	}
 }
