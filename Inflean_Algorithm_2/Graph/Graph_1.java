@@ -7,9 +7,44 @@ import java.util.*;
 public class Graph_1 {
 
 	public static int solution(int n, int[][] flights, int s, int e, int k){
-		int answer = 0;
+		// 인접 리스트 구현을 위해 이중 어레이 리스트 사용
+		ArrayList<ArrayList<int[]>> graph = new ArrayList<>();
+		
+		for(int i = 0; i < n; i++) graph.add(new ArrayList<int[]>());
+		
+		int[] costs = new int[n];
+		
+		Arrays.fill(costs,10000000);
+		for(int[] x : flights) graph.get(x[0]).add(new int [] {x[1],x[2]});
+		
+		Queue<int[]> Q = new LinkedList<>();
+		
+		Q.offer(new int[] {s,0});
+		costs[s] = 0;
+		int L = 0;
+		
+		while(!Q.isEmpty()){
+			int len = Q.size();
+			for(int i = 0; i < len; i++) {
+				int[] p = Q.poll();
+				int now = p[0];
+				int nowcost = p[1];
+				for(int[] x : graph.get(now)){
+					int next = x[0];
+					int cost = x[1];
+					if(nowcost + cost < costs[next]){
+						costs[next] = nowcost + cost;
+						Q.offer(new int[]{next, costs[next]});
+					}
+				}
+			}
+			L++;
+			if(L > k) break;
+		}
+		
+		if (costs[e] == 10000000 ) return -1;
 
-		return answer;
+		return costs[e];
 	}
 		
 	public static void main(String[] args){

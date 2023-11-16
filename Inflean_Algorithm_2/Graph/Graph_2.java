@@ -8,8 +8,44 @@ public class Graph_2 {
 
 	public static int solution(int[][] routes, int s, int e){
 		int answer = 0;
+		// 지하철 노선정보 그래프 표현 
+		HashMap<Integer, HashSet<Integer>> graph = new HashMap<>();
+		int n =  routes.length;
 		
-		return answer;
+		for(int i = 0; i < n; i++) {
+			for(int x : routes[i]) {
+				// putIfAbsent 키가 존재 하지 않으면 빈 해쉬셋을 생성하여 대응 해준다.
+				graph.putIfAbsent(x, new HashSet<Integer>());
+				
+				// 빈 해쉬셋 에 호선 정보를 넣어준다.
+				graph.get(x).add(i);
+			}
+			
+		}
+		Queue<Integer> Q = new LinkedList<>();
+		// 이미 방문한 호선을 다시 탐색 하지 않도록 호선 체크 
+		int [] ch = new int[n];
+
+		Q.offer(s);
+		int L = 0;
+		while(!Q.isEmpty()) {
+			int len = Q.size();
+			for(int i = 0; i < len; i++) {
+				int curStop = Q.poll();
+				for(int line : graph.get(curStop)) {
+					if(ch[line] == 1) continue;
+					ch[line] = 1;
+					// 그 호선에 있는 지하철 탐색 
+					for(int stop : routes[line]) {
+						if(stop == e) return L;
+						Q.offer(stop);
+					}
+				}
+			}
+			L++;
+		}
+		
+		return -1;
 	}
 		
 	public static void main(String[] args){
