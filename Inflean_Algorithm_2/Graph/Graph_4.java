@@ -15,8 +15,7 @@ public class Graph_4 {
 		 for(int i = 0; i < n; i++) Arrays.fill(cost[i],Integer.MAX_VALUE);
 	     cost[0][0] = 0;
 	     PriorityQueue<int[]> pq = new PriorityQueue<int[]>((a,b) -> a[2] - b[2]);
-	     
-	     
+
 	     pq.add(new int[] {0,0,0});
 	     while(!pq.isEmpty()) {
 	    	 int[] cur = pq.poll();

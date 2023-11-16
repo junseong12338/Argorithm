@@ -7,8 +7,8 @@ import java.util.*;
 public class Graph_5 {
 
 	public static int solution(int[][] board, int[] s, int[] e){
-		int answer = 0;
-		return answer;
+		
+		return 0;
    	}
 	public static void main(String[] args){
 		
