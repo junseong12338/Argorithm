@@ -3,7 +3,7 @@ package Hashing_Parsing;
 import java.util.*;
 
 //Main 한 번만 사용한 최초문자
-public class Hashing_Parsing_01_Answer {
+public class Hashing_Parsing_01 {
 	
 	public static int solution(String s){
 		// 해쉬 맵 기본구조 키와 밸류

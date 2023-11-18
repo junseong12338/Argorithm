@@ -2,22 +2,27 @@ package Hashing_Parsing;
 
 import java.util.*;
 
-//Main
-public class Hashing_Parsing_02_My {
+//Main 같은 빈도수 만들기
+public class Hashing_Parsing_02 {
 	
 	public static int[] solution(String s){
 		int[] answer = new int[5];
+		HashMap<Character, Integer> sH = new HashMap<>();
 		
-		HashMap<Character, Integer> map = new HashMap<>();
-		for(char x : s.toCharArray()) map.put(x, map.getOrDefault(x, 0) + 1); 
-	
+		for(char x : s.toCharArray()){
+			sH.put(x, sH.getOrDefault(x, 0)+1); 
+		}
+		
+		int max = Integer.MIN_VALUE;
 		String tmp = "abcde";
-		
-	    // Max Value
-        Integer maxValue = Collections.max(map.values());
-
-		for(int i = 0; i < 5; i++) answer[i] = maxValue - map.getOrDefault(tmp.charAt(i), 0);
-		
+		for(char key : tmp.toCharArray()){
+			if(sH.getOrDefault(key, 0) > max){
+				max = sH.getOrDefault(key, 0);
+			}
+		}
+		for(int i = 0; i < tmp.length(); i++){
+			answer[i] = max - sH.getOrDefault(tmp.charAt(i), 0);
+		}
 		return answer;
 	}
 
