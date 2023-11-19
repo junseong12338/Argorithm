@@ -4,6 +4,11 @@ package Sorting_Searching;
 import java.util.*;
 
 //Main
+
+
+
+
+
 public class Sorting_Searching_10 {
 	
 	public static int count (int [] arr, int dist) {

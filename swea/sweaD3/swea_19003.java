@@ -13,30 +13,31 @@ public class swea_19003 {
 		int T = sc.nextInt();
 		
 		for(int TC = 1 ; TC<= T; TC++) {
-			int n = sc.nextInt();
-			int len = sc.nextInt();
-			List<String> FP = new ArrayList<>();
-			boolean check = false;
-			for(int i = 0; i < n; i++) {
-				String  str = sc.next();
-				String palindrome = new StringBuilder(str).reverse().toString();
+			
+			int N = sc.nextInt();
+			int S = sc.nextInt();
+			int cnt = 0;
+			int answer = 0;
+			ArrayList<String> Arr = new ArrayList<String>();
+			for(int i = 0; i < N; i++) {
+				String str = sc.next();
+				String ck = "";
+				for(int j = str.length()-1; j >= 0; j--) ck += str.charAt(j);
 				
-				if(!str.equals(palindrome))FP.add(str);
-				else check = true;
+				if(str.equals(ck)) answer = S;
+				else Arr.add(str);
 				
 			}
-		  
-		    int cnt = 0;
-		   
-		    while (!FP.isEmpty()) {
-		    
-                String temp = FP.remove(FP.size() - 1);
-                if (FP.contains(new StringBuilder(temp).reverse().toString())) {
-                    cnt += 2;
-                }
-            }
-			int answer = cnt*len;
-			if(check) answer += len;
+			
+			while(!Arr.isEmpty()) {
+				String tmp = Arr.remove(Arr.size() - 1);
+				String ck = "";
+				for(int j = tmp.length()-1; j >= 0; j--) ck += tmp.charAt(j);
+				  if (Arr.contains(ck)) {
+					  cnt+=2;
+				  }
+			}
+			 answer += cnt*S;
 			
 			System.out.println("#"+TC+" "+answer);
 			
