@@ -1,7 +1,7 @@
 package BaekJoon_Algorithm_Data_Structure;
 
 import java.util.Scanner;
-public class BaekJoon_Prefix_Sum_11659_S3 {
+public class BaekJoon_11659_S3 {
 	// Main
 	public static void main(String[] args) {
 		
@@ -10,24 +10,23 @@ public class BaekJoon_Prefix_Sum_11659_S3 {
 		int n = sc.nextInt();
 		int m = sc.nextInt();
 		
-		int arr[] = new int [n];
-		int s[] = new int [n+1];
-		for(int i = 0; i < n; i++) {
-			arr[i] = sc.nextInt();
-		}
+		int Arr[] = new int [n+1];
 		
-		s[1] = arr[0];
+		for(int i = 1; i <= n;i++) Arr[i] = sc.nextInt();
 		
-		for(int i = 2; i<=n; i++) {
-			s[i]+= s[i-1]+arr[i-1];
-		}
-		
+		int S[] = new int [n+1];
+		for(int i = 1; i <= n; i++) S[i] = S[i-1] + Arr[i]; 
 	
-		for(int k = 0; k<m; k++) {
+		
+		for(int k = 0; k < m; k++) {
+			
 			int i = sc.nextInt();
 			int j = sc.nextInt();
-			System.out.println(s[j] - s[i-1]);
+			
+			System.out.println(S[j] - S[i -1]);
+			
 		}
+		
 	}
 
 }
